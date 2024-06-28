@@ -36,7 +36,7 @@
       </div>
 
       <div class="w-8/12 flex justify-end">
-        <img src="./assets/HeartfeltEdgeStudio-02.png" alt="user image" />
+        <img src="./assets/HeartfeltEdgeStudioPadded.png" alt="user image" />
       </div>
     </div>
   </div>
@@ -57,7 +57,7 @@
         </button></a>
       </div>
       <div class="card-image bg-white-100">
-        <img class="object-cover w-full h-100 rounded-xl md:h-100" src="./assets/digithonLogo.jpg" />
+        <img class="object-cover w-full h-100 rounded-xl md:h-100" src="./assets/DigithonLogo.jpg" />
       </div>
     </div>
 
@@ -99,7 +99,7 @@
   </div>
 
   <div class="banner-1 md:flex items-center md:justify-evenly" id="about">
-    <img class="md:h-[400px] h-[400px] py-8 px-8 md:py-16 md:px-20" src="./assets/Heartfelt Edge Studio-02 - Copy.png" alt="user image" />
+    <img class="md:h-[400px] h-[400px] py-8 px-8 md:py-16 md:px-20" src="./assets/HeartfeltEdgeStudioSmallLogo.png" alt="user image" />
     <div class="space-y-5 py-8 px-8 md:py-16 md:px-20 md:w-1/2">
       <h4 class="project-title item">Why do we want to develop video games?</h4>
       <p class="font-work_sans">
