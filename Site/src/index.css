@@ -10,7 +10,7 @@
 }
 
 .banner-2 {
-  @apply px-5  pt-5 md:pt-10 3xl:px-36 2xl:px-36 xl:px-28 lg:px-24 md:px-16;
+  @apply px-5 py-8 3xl:px-36 2xl:px-36 xl:px-28 lg:px-24 md:px-16;
   background-color: #000000;
 }
 .menu-button {
@@ -28,14 +28,14 @@
 }
 
 .project-title {
-  @apply text-gray-700 text-3xl md:text-4xl font-work_sans tracking-wide font-bold;
+  @apply text-gray-700 text-4xl md:text-5xl font-work_sans tracking-wide font-bold;
 }
 
 .card {
-  @apply bg-white rounded-2xl md:flex place-items-center my-20 shadow-md;
+  @apply bg-white rounded-2xl xl:flex place-items-center my-20 shadow-md;
 }
 .card-image {
-  @apply md:w-1/2 md:rounded-r-2xl md:rounded-l-none rounded-b-2xl flex;
+  @apply xl:w-1/2 md:rounded-r-2xl md:rounded-l-none rounded-b-2xl flex;
 }
 
 @layer utilities {
