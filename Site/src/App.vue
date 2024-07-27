@@ -91,7 +91,7 @@
   <div class="banner-1 xl:flex items-center md:justify-evenly" id="about">
     <img style="height: 100vh;width: 100vh;object-fit: scale-down;" src="./assets/HeartfeltEdgeStudioSmallLogo.png"
       alt="user image" />
-    <div class="m-0 p-0 sm:pb-12 md:mb-0">
+    <div class="pb-12 xl:p-0">
       <h4 class="project-title md:text-7xl text-5xl item">What drives us to create video games?</h4>
       <p class="font-work_sans md:text-5xl text-3xl">
         Our dream is to make something we can be proud of, sharing our vision with the world.
