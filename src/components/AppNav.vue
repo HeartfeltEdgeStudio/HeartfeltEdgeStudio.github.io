@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar color="secondary" scroll-behavior="collapse">
+  <v-app-bar color="secondary-1" scroll-behavior="collapse">
     <v-app-bar-title>
       <v-img width="130" src="../assets/HeartfeltEdgeStudioWhite.png" />
     </v-app-bar-title>

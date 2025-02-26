@@ -1,5 +1,5 @@
 <template>
-  <v-footer class="bg-secondary text-center d-flex flex-column ">
+  <v-footer class="bg-secondary-1 text-center d-flex flex-column">
     <v-form ref="form" v-model="valid" lazy-validation class="w-md-50 w-75">
       <div class="px-4 pt-4 d-sm-flex align-center">
         <v-text-field label="E-mail" placeholder="youremail@email.com" outlined v-model="email"
