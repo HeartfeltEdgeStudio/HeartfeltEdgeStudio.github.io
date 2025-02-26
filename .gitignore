@@ -1,21 +1,31 @@
-# build output
-dist/
-# generated types
-.astro/
+/dev/Playground.vue
+/dev/components.d.ts
+/cypress/screenshots
 
-# dependencies
-node_modules/
+# Built files
+/es5/
+/lib/
+/lib-temp/
+/types-temp/
+/dist/
+/dev/dist/
 
-# logs
+# local env files
+.env.local
+.env.*.local
+
+# Log files
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-pnpm-debug.log*
 
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
 
-# environment variables
-.env
-.env.production
-
-# macOS-specific files
-.DS_Store
+.vercel
