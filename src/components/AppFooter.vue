@@ -69,7 +69,7 @@ export default {
   },
   data() {
     return {
-      duration: 300,
+      duration: 600,
       number: 0,
       offset: 0,
       target: 'By Number',

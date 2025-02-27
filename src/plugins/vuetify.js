@@ -24,6 +24,7 @@ const myCustomLightTheme = {
     'primary-darken-1': '#597D27',
     secondary: '#000000',
     'secondary-1': '#1F1F1F',
+    'secondary-2': '#E5E7EB',
     error: '#B00020',
     info: '#2196F3',
     success: '#8DC63F',
