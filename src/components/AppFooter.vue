@@ -5,9 +5,12 @@
         <v-text-field label="E-mail" placeholder="youremail@email.com" outlined v-model="email"
           :rules="emailRules"></v-text-field>
         <v-col cols="12" sm="auto" class="pa-0 pl-sm-5 pb-6 mt-sm-0 mt-1">
-          <v-btn :disabled="!valid" color="success" class="w-100 pb-9 pt-5" @click="validate">
+  <!--         <v-btn :disabled="!valid" color="success" class="w-100 pb-9 pt-5" @click="validate">
             Claim Exclusive Access
-          </v-btn>
+          </v-btn> -->
+          
+          <v-btn :disabled="!valid" color="primary" @click="validate" class="w-100 h-100 py-4"> <p class="text-wrap text-left" style="margin: auto;">
+            Claim Exclusive Access</p></v-btn>
         </v-col>
       </div>
     </v-form>
@@ -37,7 +40,7 @@
       “HEARTFELT GAMES WITH A CUTTING EDGE”
     </p>
 
-    <v-img width="200" class="my-5" src="../assets/HeartfeltEdgeStudioWhite.png" />
+    <v-img width="200" class="my-5" src="../assets/logos/HeartfeltEdgeStudioWhite.png" />
 
     <a href="#" @click="onClick" class="text-decoration-none mb-5" style="color: inherit;">
       <v-container class="pb-3">
