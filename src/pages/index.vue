@@ -86,17 +86,7 @@
     <div class="w-100 d-flex flex-column flex-md-row align-center pb-16">
       <div class="d-flex flex-column align-center w-100">
         <v-card class="w-75 mt-10" transition="scroll-y-transition">
-          <v-carousel>
-            <v-carousel-item src="../assets/art/conceptTrophyStudy.png"></v-carousel-item>
-            
-            <v-carousel-item src="../assets/art/albertoCharacter.png" cover></v-carousel-item>
-            
-            <v-carousel-item src="../assets/art/watch.png" cover></v-carousel-item>
-            
-            <v-carousel-item src="../assets/art/screenDeskModel.png" cover></v-carousel-item>
-
-            <v-carousel-item src="../assets/art/trophyModel.png"></v-carousel-item>
-          </v-carousel>
+         <ConceptArtCarousel></ConceptArtCarousel>
 
           <v-card-subtitle class="pt-4">
             Our Games
@@ -165,6 +155,7 @@
 
 <script>
 import { useGoTo } from 'vuetify'
+import ConceptArtCarousel from '../components/ConceptArtCarousel.vue';
 
 export default {
   setup() {
