@@ -27,31 +27,33 @@ useHead({
 
   <div class="bg-secondary align-center" style="min-height: auto;">
     <div class="d-flex flex-column">
-          <div v-for="(update, index) in updates" :key="index" class="d-flex flex-column align-center py-16" transition="scroll-y-transition">
-            <router-link :to="`/updatedetail/${update.id}`" class="text-decoration-none d-flex flex-column align-center justify-center w-100">
-                <v-card class="mt-10 border" style="width: 90%;" transition="scroll-y-transition">
-                  <v-img class="align-end text-white" height="320" :src="appStore.methods.getImagePath(update.cover)" cover>
-                    <v-card-title>{{ update.title }}</v-card-title>
-                  </v-img>
-                  <v-card-subtitle class="pt-4">
-                    {{ update.subtitle }}
-                  </v-card-subtitle>
+      <div v-for="(update, index) in updates" :key="index" class="d-flex flex-column align-center py-16"
+        transition="scroll-y-transition">
+        <router-link :to="`/updatedetail/${update.id}`"
+          class="text-decoration-none d-flex flex-column align-center justify-center w-100">
+          <v-card class="mt-10 border elevation-9" style="width: 90%;" transition="scroll-y-transition">
+            <v-img class="align-end text-white" height="320" :src="appStore.methods.getImagePath(update.cover)" cover>
+              <v-card-title>{{ update.title }}</v-card-title>
+            </v-img>
+            <v-card-subtitle class="pt-4">
+              {{ update.subtitle }}
+            </v-card-subtitle>
 
-                  <v-card-text>
-                    <div class="text-justify">{{ update.body }}</div>
-                  </v-card-text>
+            <v-card-text>
+              <div class="text-justify">{{ update.body }}</div>
+            </v-card-text>
 
-                  <v-card-actions>
-                    <v-btn color="primary" append-icon="mdi-arrow-right" class="h-100">
-                      <p class="text-wrap text-left" style="margin: auto;">
-                        {{ update.button }}
-                      </p>
-                    </v-btn>
-                  </v-card-actions>
-                </v-card>
-            </router-link>
-        </div>
-     
+            <v-card-actions>
+              <v-btn color="primary" append-icon="mdi-arrow-right" class="h-100">
+                <p class="text-wrap text-left" style="margin: auto;">
+                  {{ update.button }}
+                </p>
+              </v-btn>
+            </v-card-actions>
+          </v-card>
+        </router-link>
+      </div>
+
     </div>
   </div>
 </template>

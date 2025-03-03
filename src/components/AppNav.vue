@@ -1,6 +1,6 @@
 <template>
   <v-app-bar color="secondary-1" scroll-behavior="collapse">
-    <v-app-bar-title> 
+    <v-app-bar-title>
       <div style="width: 130px;">
         <a href="/">
           <v-img width="130" src="../assets/logos/HeartfeltEdgeStudioWhite.png" />
@@ -15,13 +15,8 @@
       </template>
 
       <v-list>
-        <v-list-item 
-          class="px-8" 
-          v-for="(item, i) in items" 
-          :key="i" 
-          :to="item.path"
-          :disabled="isCurrentPage(item.path)"
-        >
+        <v-list-item class="px-8" v-for="(item, i) in items" :key="i" :to="item.path"
+          :disabled="isCurrentPage(item.path)">
           <v-list-item-title>{{ item.title }}</v-list-item-title>
         </v-list-item>
       </v-list>

@@ -5,7 +5,7 @@
         <v-text-field label="E-mail" placeholder="youremail@email.com" outlined v-model="email"
           :rules="emailRules"></v-text-field>
         <v-col cols="12" sm="auto" class="pa-0 pl-sm-5 pb-6 mt-sm-0 mt-1">
-          <v-btn color="primary" @click="validate" class="w-100 h-100 py-4">
+          <v-btn color="primary" @click="validate" class="w-100 h-100 py-4 ">
             <p class="text-wrap text-left" style="margin: auto;">
               Claim Exclusive Access</p>
           </v-btn>

@@ -28,7 +28,7 @@ async function zipAndDownload() {
       if (!image) continue;  // Skip if image is falsy (e.g., null or undefined)
 
       const imagePath = appStore.methods.getImagePath(image);
-      
+
       try {
         const response = await fetch(imagePath);
         const blob = await response.blob();
@@ -149,7 +149,8 @@ async function zipAndDownload() {
             Joyful Masks draws from a rich <span class="font-weight-black text-primary">Italian atmosphere</span>,
             blending the warmth of cozy, sunlit spaces with the quiet mystery of overgrown courtyards and forgotten
             corridors. Inspired by historic universities, aged villas, and the lush greenery of the Italian
-            countryside, our world feels lived-in—filled with history, yet touched by something just out of reach.<br /><br />
+            countryside, our world feels lived-in—filled with history, yet touched by something just out of
+            reach.<br /><br />
             The contrast between inviting, familiar places and strange, dreamlike distortions creates an experience
             that is both comforting and intriguing. Every hallway, every puzzle, and every shift in the environment is
             <span class="font-weight-black text-primary">carefully crafted to evoke a sense of discovery</span>,
@@ -170,7 +171,8 @@ async function zipAndDownload() {
               what we’ve been working on.</span>
           </p>
 
-          <div class="w-100 text-nowrap text-secondary text-h5 font-weight-bold pt-4 pb-4 w-50">Icons and Logos, The Team
+          <div class="w-100 text-nowrap text-secondary text-h5 font-weight-bold pt-4 pb-4 w-50">Icons and Logos, The
+            Team
           </div>
           <v-btn @click="zipAndDownload" color="primary" class="w-100 mx-auto h-100 py-8 mb-8 border-md">
             <p class="text-wrap font-weight-bold text-center text-h4" style="margin: auto;">

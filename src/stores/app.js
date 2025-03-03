@@ -6,7 +6,7 @@ export const useAppStore = defineStore('app', {
     logos: [
       "logos/HeartfeltEdgeStudio-02.png",
       "logos/HeartfeltEdgeStudio.png",
-      "logos/HeartfeltEdgeStudio2.jpg", 
+      "logos/HeartfeltEdgeStudio2.jpg",
       "logos/HeartfeltEdgeStudio2.png",
       "logos/HeartfeltEdgeStudioRectangularLogo.png",
       "logos/HeartfeltEdgeStudioSquare.jpg",
@@ -15,7 +15,7 @@ export const useAppStore = defineStore('app', {
     eventPics: [
       "pics/TeamPic.png",
       "pics/digithonPic.png",
-      "pics/digithon2.jpeg", 
+      "pics/digithon2.jpeg",
     ],
     team: [
       {

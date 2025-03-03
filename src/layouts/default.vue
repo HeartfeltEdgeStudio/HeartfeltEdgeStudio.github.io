@@ -1,12 +1,12 @@
 <template>
-  <AppNav/>
+  <AppNav />
   <v-main>
     <router-view />
   </v-main>
-  
-  <AppFooter/>
+
+  <AppFooter />
 </template>
 
 <script setup>
-  //
+//
 </script>

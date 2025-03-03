@@ -42,7 +42,7 @@ const { team } = storeToRefs(appStore);
       <div class="w-100">
         <div class="d-flex justify-center my-8 px-6 px-sm-16 py-12">
           <div>
-            <div class="text-nowrap text-secondary-2 text-h3 font-weight-bold opacity-100">Behind the Pixels</div>
+            <div class="text-nowrap text-secondary-2 text-h3 font-weight-bold ">Behind the Pixels</div>
             <p class="text-secondary-2 text-h6">
               We're a group of developers, artists, and sound designers who just love making games. Some of us bring
               worlds to life with code, others create stunning visuals, and some shape the atmosphere with music and
@@ -56,7 +56,7 @@ const { team } = storeToRefs(appStore);
         <div class="d-flex flex-wrap justify-center pb-16">
           <div v-for="(member, index) in team" :key="index" transition="scroll-y-transition">
             <a v-if="member.socialMedia" :href="member.socialMedia" target="_blank"
-              class="text-decoration-none d-flex flex-column align-center justify-center mx-8 my-8"
+              class="elevation-9 text-decoration-none d-flex flex-column align-center justify-center mx-8 my-8"
               style="color: inherit;">
               <v-avatar size="250" class="mb-3  text-center" transition="scroll-y-transition">
                 <v-img :src="appStore.methods.getImagePath(member.vImg)" alt="Team Member Image"></v-img>
@@ -77,7 +77,7 @@ const { team } = storeToRefs(appStore);
               Shoot us an email, we might have a spot for you!
             </p>
 
-            <v-btn :to="'/contact'"  color="primary" class="w-100 mx-auto h-50 py-8 my-4  border-md">
+            <v-btn :to="'/contact'" color="primary" class="w-100 mx-auto h-50 py-8 my-4  border-md">
               <p class="text-wrap font-weight-bold text-center text-h4" style="margin: auto;">
                 OPEN APPLICATION</p>
             </v-btn>

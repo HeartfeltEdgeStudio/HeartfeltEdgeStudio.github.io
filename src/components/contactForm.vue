@@ -1,5 +1,5 @@
 <template>
-  <v-sheet border="md" color="primary" class="mx-2 mx-sm-16 my-6 rounded">
+  <v-sheet border="md" color="primary" class="mx-2 mx-sm-16 my-6 rounded elevation-9">
     <form class="bg-secondary-1 pa-4 rounded" @submit.prevent="submitForm">
       <v-text-field v-model="state.name" :counter="70" :error-messages="v$.name.$errors.map(e => e.$message)"
         label="Name" required @blur="v$.name.$touch" @input="v$.name.$touch"></v-text-field>

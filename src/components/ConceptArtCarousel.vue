@@ -1,14 +1,17 @@
 <template>
   <div>
-    <v-carousel class="bg-secondary">
-      <v-carousel-item src="../assets/art/conceptTrophyStudy.png" @click="openOverlay('conceptTrophyStudy.png')"></v-carousel-item>
-      
-      <v-carousel-item src="../assets/art/albertoCharacter.png" @click="openOverlay('albertoCharacter.png')"></v-carousel-item>
-      
+    <v-carousel class="bg-secondary elevation-9">
+      <v-carousel-item src="../assets/art/conceptTrophyStudy.png"
+        @click="openOverlay('conceptTrophyStudy.png')"></v-carousel-item>
+
+      <v-carousel-item src="../assets/art/albertoCharacter.png"
+        @click="openOverlay('albertoCharacter.png')"></v-carousel-item>
+
       <v-carousel-item src="../assets/art/watch.png" cover @click="openOverlay('watch.png')"></v-carousel-item>
-      
-      <v-carousel-item src="../assets/art/screenDeskModel.png" cover @click="openOverlay('screenDeskModel.png')"></v-carousel-item>
-      
+
+      <v-carousel-item src="../assets/art/screenDeskModel.png" cover
+        @click="openOverlay('screenDeskModel.png')"></v-carousel-item>
+
       <v-carousel-item src="../assets/art/trophyModel.png" @click="openOverlay('trophyModel.png')"></v-carousel-item>
     </v-carousel>
 

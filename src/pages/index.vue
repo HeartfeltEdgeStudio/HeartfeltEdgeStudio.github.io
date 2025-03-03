@@ -20,8 +20,8 @@
   </div>
 
   <v-parallax src="../assets/backgrounds/BgShape.png" :aspect-ratio="1" transition="scroll-y-transition"
-    class="bg-white align-center " style="min-height: auto; clip-path: polygon(0 3%, 100% 0, 100% 100%, 0% 100%);"
-    cover>
+    class="bg-white d-flex align-center elevation-9"
+    style="min-height: auto; clip-path: polygon(0 3%, 100% 0, 100% 100%, 0% 100%);" cover>
     <div class="w-100">
       <a href="#" @click="onClick" class="text-decoration-none" style="color: inherit;">
 
@@ -37,7 +37,7 @@
 
     <div class="d-flex flex-column align-center w-100" id="below">
       <router-link :to="`/about`" class="text-decoration-none d-flex flex-column align-center justify-center w-100">
-        <v-card class="w-75 mt-10 border" transition="scroll-y-transition">
+        <v-card class="w-75 mt-10 border elevation-9" transition="scroll-y-transition">
           <v-img class="align-end text-white" height="320" src="../assets/pics/digithonPic.png" cover>
             <v-card-title>Digithon 2024</v-card-title>
           </v-img>
@@ -62,7 +62,7 @@
 
     <div class="d-flex flex-column align-center w-100">
       <router-link :to="`/about`" class="text-decoration-none d-flex flex-column align-center justify-center w-100">
-        <v-card class="w-75 mt-10 border" transition="scroll-y-transition">
+        <v-card class="w-75 mt-10 border elevation-9" transition="scroll-y-transition">
           <v-img class="align-end text-white" height="320" src="../assets/pics/TeamPic.png" cover>
             <v-card-title>The Team</v-card-title>
           </v-img>
@@ -86,7 +86,7 @@
     </div>
 
     <div class="d-flex flex-column align-center w-100">
-      <v-card class="w-75 mt-10 border" transition="scroll-y-transition">
+      <v-card class="w-75 mt-10 border elevation-9" transition="scroll-y-transition">
 
         <ConceptArtCarousel></ConceptArtCarousel>
 
@@ -108,7 +108,7 @@
       </v-card>
     </div>
 
-    <div class="d-flex flex-column align-center w-100"><router-link :to="`/updates`"
+    <div class="d-flex flex-column align-center w-100 elevation-9"><router-link :to="`/updates`"
         class="text-decoration-none d-flex flex-column align-center justify-center w-100">
         <v-card class="w-75 my-10 border" transition="scroll-y-transition" subtitle="News about our projects and events"
           text="See what’s going on with our game dev journey! If you’d like to get updates about events and new content, subscribe to our newsletter!"

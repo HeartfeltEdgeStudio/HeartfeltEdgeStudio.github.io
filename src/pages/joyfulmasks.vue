@@ -18,8 +18,7 @@ const nonMobileStyles = computed(() => {
 <template>
   <div ref="pageContainer" class="page-container">
     <v-overlay :absolute="absolute" v-model="overlay" class="align-center justify-center overflow-auto">
-      <v-card
-  :style="nonMobileStyles">
+      <v-card :style="nonMobileStyles">
         <div class="d-flex justify-end">
           <v-icon icon="$cancel" @click="overlay = false"></v-icon>
         </div>
@@ -41,7 +40,7 @@ const nonMobileStyles = computed(() => {
             <div class="">
               <v-text-field label="E-mail" placeholder="youremail@email.com" outlined v-model="email"
                 :rules="emailRules"></v-text-field>
-              <v-btn @click="validate" class="w-100 h-100 py-4 mt-2 bg-primary">
+              <v-btn @click="validate" class="w-100 h-100 py-4 mt-2 bg-primary elevation-9">
                 <p class="text-wrap text-left" style="margin: auto;">
                   Give me some cool content!</p>
               </v-btn>
@@ -50,7 +49,7 @@ const nonMobileStyles = computed(() => {
       </v-card>
     </v-overlay>
     <!-- Sticky Button -->
-    <div ref="stickyButton" class="sticky-button">
+    <div ref="stickyButton" class="sticky-button elevation-9">
       <v-btn color="primary" @click="overlay = !overlay" class="mx-auto py-2 py-sm-4" style="height: fit-content;">
         <p class="text-wrap font-weight-bold text-center text-h6 text-sm-h4">
           Claim Exclusive Access
@@ -59,7 +58,8 @@ const nonMobileStyles = computed(() => {
     </div>
 
     <!-- Parallax Section -->
-    <v-parallax :aspect-ratio="1" class="bg-white" src="../assets/art/keyArtNoWatermark.jpg" transition="scroll-y-transition" cover>
+    <v-parallax :aspect-ratio="1" class="bg-white" src="../assets/art/keyArtNoWatermark.jpg"
+      transition="scroll-y-transition" cover>
       <div class="d-flex align-center flex-column">
         <div class="text-nowrap font-weight-black text-primary text-h1 text-center pt-16">Joyful Masks</div>
         <div class="text-nowrap text-primary text-h5 font-weight-thin text-center pt-6">
@@ -79,7 +79,8 @@ const nonMobileStyles = computed(() => {
               Watch the <span class="font-weight-black text-primary">trailer</span> and see the adventure unfold.
             </p>
 
-            <div class="bg-secondary-1 d-flex justify-center mt-4 align-center font-weight-bold text-subtitle-1"
+            <div
+              class="bg-secondary-1 elevation-9 d-flex justify-center mt-4 align-center font-weight-bold text-subtitle-1"
               style="height: 30vh;">Coming Soon!
             </div>
 
