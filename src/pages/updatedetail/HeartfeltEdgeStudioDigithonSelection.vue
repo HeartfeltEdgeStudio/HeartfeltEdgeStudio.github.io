@@ -1,0 +1,3 @@
+<template>
+  <DynamicPageTemplate></DynamicPageTemplate>
+</template>

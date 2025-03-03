@@ -1,8 +1,25 @@
+<script setup>
+import { ref, computed } from 'vue';
+
+const isNonMobile = computed(() => window.innerWidth > 768);
+
+const nonMobileStyles = computed(() => {
+  return isNonMobile.value ? {
+    marginLeft: '25%',
+    marginRight: '25%',
+    paddingRight: '3%',
+    paddingLeft: '3%',
+    paddingTop: '1%',
+    paddingBottom: '2%'
+  } : {};
+});
+</script>
+
 <template>
   <div ref="pageContainer" class="page-container">
     <v-overlay :absolute="absolute" v-model="overlay" class="align-center justify-center overflow-auto">
       <v-card
-        style="margin-left: 25%; margin-right: 25%; padding-right: 3%; padding-left: 3%; padding-top: 1%; padding-bottom: 2%;">
+  :style="nonMobileStyles">
         <div class="d-flex justify-end">
           <v-icon icon="$cancel" @click="overlay = false"></v-icon>
         </div>
@@ -20,7 +37,7 @@
         </v-card-item>
 
         <v-card-actions class="d-flex flex-column align-center justify-center">
-          <v-form ref="fom" class="w-100" v-model="valid" lazy-validation>
+          <v-form ref="form" class="w-100" v-model="valid" lazy-validation>
             <div class="">
               <v-text-field label="E-mail" placeholder="youremail@email.com" outlined v-model="email"
                 :rules="emailRules"></v-text-field>
@@ -57,7 +74,7 @@
         <div class="w-100">
           <div class="bg-primary shaped-divider"></div>
 
-          <div class="d-flex flex-column justify-center mx-8 mb-8 px-8 px-md-16 pb-8">
+          <div class="d-flex flex-column justify-center mb-8 px-4 px-sm-16 pb-8">
             <p class="text-secondary text-h5 font-weight-bold">
               Watch the <span class="font-weight-black text-primary">trailer</span> and see the adventure unfold.
             </p>

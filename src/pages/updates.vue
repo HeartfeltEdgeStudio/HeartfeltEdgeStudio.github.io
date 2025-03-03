@@ -14,10 +14,10 @@ useHead({
 
 <template>
   <v-sheet border="b-md" color="secondary-2">
-    <div class="bg-primary d-flex justify-center px-16 py-16">
+    <div class="bg-primary d-flex justify-center px-6 py-16">
       <div>
         <div class="text-nowrap text-secondary-1 text-h3 font-weight-bold">Updates</div>
-        <p class="text-secondary-2 text-h6">
+        <p class="text-secondary-2  text-h6">
           See what’s going on with our game dev journey!<br />
           If you’d like to get updates about events and new content, subscribe to our newsletter!
         </p>
@@ -27,9 +27,9 @@ useHead({
 
   <div class="bg-secondary align-center" style="min-height: auto;">
     <div class="d-flex flex-column">
-          <div v-for="(update, index) in updates" :key="index" class="d-flex flex-column align-center" transition="scroll-y-transition">
+          <div v-for="(update, index) in updates" :key="index" class="d-flex flex-column align-center py-16" transition="scroll-y-transition">
             <router-link :to="`/updatedetail/${update.id}`" class="text-decoration-none d-flex flex-column align-center justify-center w-100">
-                <v-card class="w-75 mt-10 border"  transition="scroll-y-transition">
+                <v-card class="mt-10 border" style="width: 90%;" transition="scroll-y-transition">
                   <v-img class="align-end text-white" height="320" :src="appStore.methods.getImagePath(update.cover)" cover>
                     <v-card-title>{{ update.title }}</v-card-title>
                   </v-img>
@@ -38,7 +38,7 @@ useHead({
                   </v-card-subtitle>
 
                   <v-card-text>
-                    <div>{{ update.body }}</div>
+                    <div class="text-justify">{{ update.body }}</div>
                   </v-card-text>
 
                   <v-card-actions>

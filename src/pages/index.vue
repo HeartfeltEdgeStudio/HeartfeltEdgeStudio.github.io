@@ -2,7 +2,7 @@
   <div class="d-flex justify-space-around align-center bg-grey-lighten-4 mb-xxl-16">
 
     <v-parallax :aspect-ratio="1" class="bg-white align-center pt-0 pb-lg-16" src="../assets/backgrounds/BgTop.jpg"
-      width="300" height="700" style="margin-bottom: -10vw;" transition="scroll-y-transition" cover >
+      width="300" height="700" style="margin-bottom: -10vw;" transition="scroll-y-transition" cover>
       <div class="d-flex justify-center p-0 mb-md-16 px-5">
         <div class="m-0">
           <div class="text-nowrap text-primary text-h4 text-sm-h2 text-lg-h1">Games From Our Hearts</div>
@@ -11,15 +11,17 @@
             TRY
             SOMETHING
             MADE WITH CARE AND CREATIVITY</div>
-          <v-btn href="/joyfulmasks" append-icon="mdi-arrow-right" class="w-sm-25 ml-md-1 my-2" color="primary"
+          <v-btn :to="'/joyfulmasks'" append-icon="mdi-arrow-right" class="w-sm-25 ml-md-1 my-2" color="primary"
             text="Our Games" variant="outlined"></v-btn>
+
         </div>
       </div>
     </v-parallax>
   </div>
 
-  <v-parallax src="../assets/backgrounds/BgShape.png" :aspect-ratio="1" transition="scroll-y-transition" class="bg-white align-center "
-    style="min-height: auto; clip-path: polygon(0 3%, 100% 0, 100% 100%, 0% 100%);" cover>
+  <v-parallax src="../assets/backgrounds/BgShape.png" :aspect-ratio="1" transition="scroll-y-transition"
+    class="bg-white align-center " style="min-height: auto; clip-path: polygon(0 3%, 100% 0, 100% 100%, 0% 100%);"
+    cover>
     <div class="w-100">
       <a href="#" @click="onClick" class="text-decoration-none" style="color: inherit;">
 
@@ -49,7 +51,7 @@
         </v-card-text>
 
         <v-card-actions>
-          <v-btn color="primary" href="/about" append-icon="mdi-arrow-right" class="h-100">
+          <v-btn color="primary" :to="'/about'"  append-icon="mdi-arrow-right" class="h-100">
             <p class="text-wrap text-left" style="margin: auto;">
               Check out what we’re all about</p>
           </v-btn>
@@ -73,7 +75,7 @@
 
         <v-card-actions>
 
-          <v-btn color="primary" href="/about" append-icon="mdi-arrow-right" class="h-100">
+          <v-btn color="primary" :to="'/about'"  append-icon="mdi-arrow-right" class="h-100">
             <p class="text-wrap text-left" style="margin: auto;">
               Get to know us</p>
           </v-btn>
@@ -96,7 +98,7 @@
         </v-card-text>
 
         <v-card-actions>
-          <v-btn color="primary" href="/joyfulmasks" append-icon="mdi-arrow-right" class="h-100">
+          <v-btn color="primary" :to="'/joyfulmasks'" append-icon="mdi-arrow-right" class="h-100">
             <p class="text-wrap text-left" style="margin: auto;">
               Discover our titles</p>
           </v-btn>
@@ -106,9 +108,11 @@
 
 
     <div class="d-flex flex-column align-center w-100">
-      <v-card class="w-75 my-10 border" transition="scroll-y-transition" subtitle="News about our projects and events" text="See what’s going on with our game dev journey! If you’d like to get updates about events and new content, subscribe to our newsletter!" title="Updates">
+      <v-card class="w-75 my-10 border" transition="scroll-y-transition" subtitle="News about our projects and events"
+        text="See what’s going on with our game dev journey! If you’d like to get updates about events and new content, subscribe to our newsletter!"
+        title="Updates">
         <v-card-actions>
-          <v-btn color="primary" href="/updates" append-icon="mdi-arrow-right" class="h-100">
+          <v-btn color="primary" :to="'/updates'" append-icon="mdi-arrow-right" class="h-100">
             <p class="text-wrap text-left" style="margin: auto;">
               See what's new</p>
           </v-btn>
