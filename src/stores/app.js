@@ -49,6 +49,12 @@ export const useAppStore = defineStore('app', {
         socialMedia: "https://www.linkedin.com/in/matteo-marcantoni/"
       },
       {
+        name: "Raffaele Marino",
+        role: "Game Artist, 3D & Animation",
+        vImg: "team/raffaeleM.png",
+        socialMedia: "https://www.linkedin.com/in/raffaele-marino-5640b9293/"
+      },
+      {
         name: "Francesco Chiarini",
         role: "Concept Artist, Assets and Characters, 3D Modeling",
         vImg: "team/francescoC.jpeg",

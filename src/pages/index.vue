@@ -1,5 +1,5 @@
 <template>
-  <div class="d-flex justify-space-around align-center bg-grey-lighten-4 mb-xxl-16">
+  <div class="d-flex justify-space-around align-center bg-grey-lighten-4 mb-n10 mb-xxl-16">
 
     <v-parallax :aspect-ratio="1" class="bg-white align-center pt-0 pb-lg-16" src="../assets/backgrounds/BgTop.jpg"
       width="300" height="700" style="margin-bottom: -10vw;" transition="scroll-y-transition" cover>
