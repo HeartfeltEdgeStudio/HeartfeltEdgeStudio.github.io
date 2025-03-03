@@ -36,51 +36,53 @@
     </div>
 
     <div class="d-flex flex-column align-center w-100" id="below">
-      <v-card class="w-75 mt-10 border" transition="scroll-y-transition">
-        <v-img class="align-end text-white" height="320" src="../assets/pics/digithonPic.png" cover>
-          <v-card-title>Digithon 2024</v-card-title>
-        </v-img>
+      <router-link :to="`/about`" class="text-decoration-none d-flex flex-column align-center justify-center w-100">
+        <v-card class="w-75 mt-10 border" transition="scroll-y-transition">
+          <v-img class="align-end text-white" height="320" src="../assets/pics/digithonPic.png" cover>
+            <v-card-title>Digithon 2024</v-card-title>
+          </v-img>
 
-        <v-card-subtitle class="pt-4">
-          More about our studio
-        </v-card-subtitle>
+          <v-card-subtitle class="pt-4">
+            More about our studio
+          </v-card-subtitle>
 
-        <v-card-text>
-          <div>Ever wonder what’s behind the games you play? We’re a small team with big ideas, crafting experiences
-            that feel different.</div>
-        </v-card-text>
+          <v-card-text>
+            <div>Ever wonder what’s behind the games you play? We’re a small team with big ideas, crafting experiences
+              that feel different.</div>
+          </v-card-text>
 
-        <v-card-actions>
-          <v-btn color="primary" :to="'/about'"  append-icon="mdi-arrow-right" class="h-100">
-            <p class="text-wrap text-left" style="margin: auto;">
-              Check out what we’re all about</p>
-          </v-btn>
-        </v-card-actions>
-      </v-card>
+          <v-card-actions>
+            <v-btn color="primary" :to="'/about'" append-icon="mdi-arrow-right" class="h-100">
+              <p class="text-wrap text-left" style="margin: auto;">
+                Check out what we’re all about</p>
+            </v-btn>
+          </v-card-actions>
+        </v-card></router-link>
     </div>
 
     <div class="d-flex flex-column align-center w-100">
-      <v-card class="w-75 mt-10 border" transition="scroll-y-transition">
-        <v-img class="align-end text-white" height="320" src="../assets/pics/TeamPic.png" cover>
-          <v-card-title>The Team</v-card-title>
-        </v-img>
+      <router-link :to="`/about`" class="text-decoration-none d-flex flex-column align-center justify-center w-100">
+        <v-card class="w-75 mt-10 border" transition="scroll-y-transition">
+          <v-img class="align-end text-white" height="320" src="../assets/pics/TeamPic.png" cover>
+            <v-card-title>The Team</v-card-title>
+          </v-img>
 
-        <v-card-subtitle class="pt-4">
-          The magic behind the scenes
-        </v-card-subtitle>
+          <v-card-subtitle class="pt-4">
+            The magic behind the scenes
+          </v-card-subtitle>
 
-        <v-card-text>
-          <div>Every project we create is a piece of us. Get to know the people behind these pixels!</div>
-        </v-card-text>
+          <v-card-text>
+            <div>Every project we create is a piece of us. Get to know the people behind these pixels!</div>
+          </v-card-text>
 
-        <v-card-actions>
+          <v-card-actions>
 
-          <v-btn color="primary" :to="'/about'"  append-icon="mdi-arrow-right" class="h-100">
-            <p class="text-wrap text-left" style="margin: auto;">
-              Get to know us</p>
-          </v-btn>
-        </v-card-actions>
-      </v-card>
+            <v-btn color="primary" :to="'/about'" append-icon="mdi-arrow-right" class="h-100">
+              <p class="text-wrap text-left" style="margin: auto;">
+                Get to know us</p>
+            </v-btn>
+          </v-card-actions>
+        </v-card></router-link>
     </div>
 
     <div class="d-flex flex-column align-center w-100">
@@ -106,17 +108,17 @@
       </v-card>
     </div>
 
-
-    <div class="d-flex flex-column align-center w-100">
-      <v-card class="w-75 my-10 border" transition="scroll-y-transition" subtitle="News about our projects and events"
-        text="See what’s going on with our game dev journey! If you’d like to get updates about events and new content, subscribe to our newsletter!"
-        title="Updates">
-        <v-card-actions>
-          <v-btn color="primary" :to="'/updates'" append-icon="mdi-arrow-right" class="h-100">
-            <p class="text-wrap text-left" style="margin: auto;">
-              See what's new</p>
-          </v-btn>
-        </v-card-actions></v-card>
+    <div class="d-flex flex-column align-center w-100"><router-link :to="`/updates`"
+        class="text-decoration-none d-flex flex-column align-center justify-center w-100">
+        <v-card class="w-75 my-10 border" transition="scroll-y-transition" subtitle="News about our projects and events"
+          text="See what’s going on with our game dev journey! If you’d like to get updates about events and new content, subscribe to our newsletter!"
+          title="Updates">
+          <v-card-actions>
+            <v-btn color="primary" :to="'/updates'" append-icon="mdi-arrow-right" class="h-100">
+              <p class="text-wrap text-left" style="margin: auto;">
+                See what's new</p>
+            </v-btn>
+          </v-card-actions></v-card></router-link>
     </div>
   </v-parallax>
 </template>
