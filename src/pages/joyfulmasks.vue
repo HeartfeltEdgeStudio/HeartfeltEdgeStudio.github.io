@@ -1,8 +1,40 @@
 <template>
   <div ref="pageContainer" class="page-container">
+    <v-overlay :absolute="absolute" v-model="overlay" class="align-center justify-center overflow-auto">
+      <v-card
+        style="margin-left: 25%; margin-right: 25%; padding-right: 3%; padding-left: 3%; padding-top: 1%; padding-bottom: 2%;">
+        <div class="d-flex justify-end">
+          <v-icon icon="$cancel" @click="overlay = false"></v-icon>
+        </div>
+        <v-card-item>
+          <div class="d-flex flex-column">
+            <div class="text-h4 mb-1 font-weight-bold">
+              Claim Exclusive Access
+            </div>
+            <div class="text-h6 font-weight-regular">Step into the Unknown—First.
+              Get exclusive updates, a chance to win a spot for <span class="font-weight-bold text-primary">early
+                access to the demo</span>, and a deeper look into the world of Joyful Masks.
+              Sign up now and be among the first to uncover the mysteries waiting beneath the surface.
+            </div>
+          </div>
+        </v-card-item>
+
+        <v-card-actions class="d-flex flex-column align-center justify-center">
+          <v-form ref="fom" class="w-100" v-model="valid" lazy-validation>
+            <div class="">
+              <v-text-field label="E-mail" placeholder="youremail@email.com" outlined v-model="email"
+                :rules="emailRules"></v-text-field>
+              <v-btn @click="validate" class="w-100 h-100 py-4 mt-2 bg-primary">
+                <p class="text-wrap text-left" style="margin: auto;">
+                  Give me some cool content!</p>
+              </v-btn>
+            </div>
+          </v-form> </v-card-actions>
+      </v-card>
+    </v-overlay>
     <!-- Sticky Button -->
     <div ref="stickyButton" class="sticky-button">
-      <v-btn color="primary" class="mx-auto py-2 py-sm-4" style="height: fit-content;">
+      <v-btn color="primary" @click="overlay = !overlay" class="mx-auto py-2 py-sm-4" style="height: fit-content;">
         <p class="text-wrap font-weight-bold text-center text-h6 text-sm-h4">
           Claim Exclusive Access
         </p>
@@ -34,6 +66,37 @@
               style="height: 30vh;">Coming Soon!
             </div>
 
+            <div class="text-nowrap text-primary text-h3 py-10 font-weight-bold">
+              "What are you hiding
+              from yourself?"</div>
+
+            <div class="text-nowrap text-secondary text-h5 font-weight-bold">The Story</div>
+            <p class="text-secondary text-body-1">
+              In a university lab, an experiment pushes the boundaries of neuroscience—and ethics. Professor Alberto
+              Saggi, a brilliant but tormented mind, volunteers to be placed in a deep, drug-induced coma. His young
+              assistant, Kurt Wagner, is tasked with something unthinkable: <span
+                class="font-weight-black text-primary">entering the subconscious of his mentor
+                through an advanced neuro-interactive system</span>.
+              <br />
+              <br />
+              What begins as a controlled study spirals into a nightmarish descent through the shattered corridors of a
+              <span class="font-weight-black text-primary">haunted psyche</span>. Familiar university halls twist into
+              something alive-walls pulse like flesh, shadows whisper
+              and shift, and buried traumas take form.
+              <br /><br />
+              Each puzzle Kurt solves brings him deeper into the professor’s darkest memories, forcing him to unravel a
+              past full of obsession, regret, and a truth too hard to ignore.
+              <br /><br />
+              <span class="font-weight-black text-primary">But something else is watching.</span> As Kurt nears the core
+              of Alberto’s mind, things take a weird turn. Is this just the professor’s subconscious fighting back, or
+              has
+              the experiment drawn the attention of something far more sinister?
+              <br /><br />
+              <span class="font-weight-bold text-primary">How far will you go to uncover the truth?</span>
+            </p>
+
+
+
             <ConceptArtCarousel class="mt-8 rounded"></ConceptArtCarousel>
 
             <div class="text-nowrap text-secondary text-h3 pt-16">
@@ -44,10 +107,6 @@
         </div>
       </div>
     </div>
-
-    <!-- Footer -->
-    <!-- This Footer is outside this component (layout level) -->
-    <FooterComponent />
   </div>
 </template>
 
@@ -84,6 +143,14 @@
 
 <script>
 export default {
+  data: () => ({
+    overlay: false,
+    valid: true,
+    email: '',
+    emailRules: [
+      v => /.+@.+\..+/.test(v) || 'E-mail must be valid',
+    ],
+  }),
   mounted() {
     // Ensure the button is positioned correctly on load
     this.handleScroll();

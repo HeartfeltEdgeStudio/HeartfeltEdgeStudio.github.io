@@ -1,8 +1,8 @@
 <template>
   <div class="d-flex justify-space-around align-center bg-grey-lighten-4 mb-xxl-16">
 
-    <v-parallax :aspect-ratio="1" class="bg-white align-center pt-0 pb-lg-16" src="../assets/backgrounds/BgTop.jpg" width="300"
-      height="700" style="margin-bottom: -10vw;" cover>
+    <v-parallax :aspect-ratio="1" class="bg-white align-center pt-0 pb-lg-16" src="../assets/backgrounds/BgTop.jpg"
+      width="300" height="700" style="margin-bottom: -10vw;" cover>
       <div class="d-flex justify-center p-0 mb-md-16 px-5">
         <div class="m-0">
           <div class="text-nowrap text-primary text-h4 text-sm-h2 text-lg-h1">Games From Our Hearts</div>
@@ -33,79 +33,86 @@
       </a>
     </div>
 
-    <div class="w-100 d-flex flex-column flex-md-row align-center" style="padding-top: 5%;">
-      <div class="d-flex flex-column align-center w-100" id="below">
-        <v-card class="w-75 mt-10" transition="scroll-y-transition">
-          <v-img class="align-end text-white"  height="320" src="../assets/pics/digithonPic.png" cover>
-            <v-card-title>Digithon 2024</v-card-title>
-          </v-img>
+    <div class="d-flex flex-column align-center w-100" id="below">
+      <v-card class="w-75 mt-10 border" transition="scroll-y-transition">
+        <v-img class="align-end text-white" height="320" src="../assets/pics/digithonPic.png" cover>
+          <v-card-title>Digithon 2024</v-card-title>
+        </v-img>
 
-          <v-card-subtitle class="pt-4">
-            More about our studio
-          </v-card-subtitle>
+        <v-card-subtitle class="pt-4">
+          More about our studio
+        </v-card-subtitle>
 
-          <v-card-text>
-            <div>Ever wonder what’s behind the games you play? We’re a small team with big ideas, crafting experiences
-              that feel different.</div>
-          </v-card-text>
+        <v-card-text>
+          <div>Ever wonder what’s behind the games you play? We’re a small team with big ideas, crafting experiences
+            that feel different.</div>
+        </v-card-text>
 
-          <v-card-actions>
-            <v-btn color="primary" href="/about" append-icon="mdi-arrow-right" class="h-100">
-              <p class="text-wrap text-left" style="margin: auto;">
-                Check out what we’re all about</p>
-            </v-btn>
-          </v-card-actions>
-        </v-card>
-      </div>
-
-      <div class="d-flex flex-column align-center w-100">
-        <v-card class="w-75 mt-10" transition="scroll-y-transition">
-          <v-img class="align-end text-white" height="320"  src="../assets/pics/TeamPic.png" cover>
-            <v-card-title>The Team</v-card-title>
-          </v-img>
-
-          <v-card-subtitle class="pt-4">
-            The magic behind the scenes
-          </v-card-subtitle>
-
-          <v-card-text>
-            <div>Every project we create is a piece of us. Get to know the people behind these pixels!</div>
-          </v-card-text>
-
-          <v-card-actions>
-
-            <v-btn color="primary" href="/about" append-icon="mdi-arrow-right" class="h-100">
-              <p class="text-wrap text-left" style="margin: auto;">
-                Get to know us</p>
-            </v-btn>
-          </v-card-actions>
-        </v-card>
-      </div>
+        <v-card-actions>
+          <v-btn color="primary" href="/about" append-icon="mdi-arrow-right" class="h-100">
+            <p class="text-wrap text-left" style="margin: auto;">
+              Check out what we’re all about</p>
+          </v-btn>
+        </v-card-actions>
+      </v-card>
     </div>
 
-    <div class="w-100 d-flex flex-column flex-md-row align-center pb-16">
-      <div class="d-flex flex-column align-center w-100">
-        <v-card class="w-75 mt-10" transition="scroll-y-transition">
-         <ConceptArtCarousel></ConceptArtCarousel>
+    <div class="d-flex flex-column align-center w-100">
+      <v-card class="w-75 mt-10 border" transition="scroll-y-transition">
+        <v-img class="align-end text-white" height="320" src="../assets/pics/TeamPic.png" cover>
+          <v-card-title>The Team</v-card-title>
+        </v-img>
 
-          <v-card-subtitle class="pt-4">
-            Our Games
-          </v-card-subtitle>
+        <v-card-subtitle class="pt-4">
+          The magic behind the scenes
+        </v-card-subtitle>
 
-          <v-card-text>
-            <div>We make the kind of games we’d love to play. Whether it’s a big adventure, or a small one, every game
-              we create comes from the heart!</div>
-          </v-card-text>
+        <v-card-text>
+          <div>Every project we create is a piece of us. Get to know the people behind these pixels!</div>
+        </v-card-text>
 
-          <v-card-actions>
-            <v-btn color="primary" href="/joyfulmasks" append-icon="mdi-arrow-right" class="h-100">
-              <p class="text-wrap text-left" style="margin: auto;">
-                Discover our titles</p>
-            </v-btn>
-          </v-card-actions>
-        </v-card>
-        
-      </div>
+        <v-card-actions>
+
+          <v-btn color="primary" href="/about" append-icon="mdi-arrow-right" class="h-100">
+            <p class="text-wrap text-left" style="margin: auto;">
+              Get to know us</p>
+          </v-btn>
+        </v-card-actions>
+      </v-card>
+    </div>
+
+    <div class="d-flex flex-column align-center w-100">
+      <v-card class="w-75 mt-10 border" transition="scroll-y-transition">
+
+        <ConceptArtCarousel></ConceptArtCarousel>
+
+        <v-card-subtitle class="pt-4">
+          Our Games
+        </v-card-subtitle>
+
+        <v-card-text>
+          <div>We make the kind of games we’d love to play. Whether it’s a big adventure, or a small one, every game
+            we create comes from the heart!</div>
+        </v-card-text>
+
+        <v-card-actions>
+          <v-btn color="primary" href="/joyfulmasks" append-icon="mdi-arrow-right" class="h-100">
+            <p class="text-wrap text-left" style="margin: auto;">
+              Discover our titles</p>
+          </v-btn>
+        </v-card-actions>
+      </v-card>
+    </div>
+
+
+    <div class="d-flex flex-column align-center w-100">
+      <v-card class="w-75 my-10 border" transition="scroll-y-transition" subtitle="News about our projects and events" text="See what’s going on with our game dev journey! If you’d like to get updates about events and new content, subscribe to our newsletter!" title="Updates">
+        <v-card-actions>
+          <v-btn color="primary" href="/updates" append-icon="mdi-arrow-right" class="h-100">
+            <p class="text-wrap text-left" style="margin: auto;">
+              See what's new</p>
+          </v-btn>
+        </v-card-actions></v-card>
     </div>
   </v-parallax>
 </template>

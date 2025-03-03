@@ -5,17 +5,13 @@
         <v-text-field label="E-mail" placeholder="youremail@email.com" outlined v-model="email"
           :rules="emailRules"></v-text-field>
         <v-col cols="12" sm="auto" class="pa-0 pl-sm-5 pb-6 mt-sm-0 mt-1">
-  <!--         <v-btn :disabled="!valid" color="success" class="w-100 pb-9 pt-5" @click="validate">
-            Claim Exclusive Access
-          </v-btn> -->
-          
-          <v-btn :disabled="!valid" color="primary" @click="validate" class="w-100 h-100 py-4"> <p class="text-wrap text-left" style="margin: auto;">
-            Claim Exclusive Access</p></v-btn>
+          <v-btn color="primary" @click="validate" class="w-100 h-100 py-4">
+            <p class="text-wrap text-left" style="margin: auto;">
+              Claim Exclusive Access</p>
+          </v-btn>
         </v-col>
       </div>
     </v-form>
-
-
 
     <p class="pt-2">
       Made In Italy
@@ -61,7 +57,6 @@
   </v-footer>
 </template>
 
-
 <script>
 import { useGoTo } from 'vuetify'
 
@@ -89,8 +84,6 @@ export default {
       emailRules: [
         v => /.+@.+\..+/.test(v) || 'E-mail must be valid',
       ],
-      select: null,
-      checkbox: false,
     }
   },
   computed: {

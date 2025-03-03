@@ -1,10 +1,22 @@
+<script setup>
+import { useAppStore } from '../stores/app';
+import { storeToRefs } from 'pinia';
+
+const appStore = useAppStore();
+const { logos } = storeToRefs(appStore);
+const { eventPics } = storeToRefs(appStore);
+</script>
+
 <template>
   <div class="white align-center" style="min-height: auto;" cover>
     <div class="d-flex flex-column">
 
       <div class="w-100">
         <div class="d-flex flex-column justify-center mx-8 my-2 px-16 py-12">
-
+          <v-btn href="/contact" color="primary" class="w-100 mx-auto h-100 py-8 mb-8 border-md">
+                <p class="text-wrap font-weight-bold text-center text-h4" style="margin: auto;">
+                  REQUEST A COPY OF THE GAME</p>
+            </v-btn>
           <div class="text-nowrap text-secondary text-h3 font-weight-bold">FACTSHEET</div>
 
           <div class="text-nowrap text-secondary text-h5 font-weight-bold pt-2">Quick Pitch</div>
@@ -113,18 +125,20 @@
               what we’ve been working on.</span>
           </p>
 
-          <div class="text-nowrap text-secondary text-h5 font-weight-bold pt-4 ">Icons and Logos, The Team</div>
-          <div class="bg-primary d-flex justify-center align-center font-weight-bold text-subtitle-1 my-10"
-            style="height: 30vh;">Coming Soon!</div>
-          <div class="bg-primary d-flex justify-center align-center font-weight-bold text-subtitle-1 my-10"
-            style="height: 30vh;">Coming Soon!</div>
-          <div class="bg-primary d-flex justify-center align-center font-weight-bold text-subtitle-1 my-10"
-            style="height: 30vh;">Coming Soon!</div>
-          <v-btn color="primary" class="w-100 mx-auto h-100 py-8 border-md">
-            <p class="text-wrap font-weight-bold text-center text-h4" style="margin: auto;">
-              REQUEST A COPY</p>
-          </v-btn>
-        </div>
+          <div class="w-100 text-nowrap text-secondary text-h5 font-weight-bold pt-4 w-50">Icons and Logos, The Team</div>
+            
+            <div v-for="(logo, index) in logos" :key="index" class="d-flex justify-center align-center">
+              <img :src="appStore.methods.getImagePath(logo)" alt="Logo" class="w-50" />
+            </div>
+            <div v-for="(picture, index) in eventPics" :key="index" class="d-flex justify-center align-center">
+              <img :src="appStore.methods.getImagePath(picture)" alt="Digithon" class="w-75 w-md-50 py-8" />
+            </div>
+              <v-btn href="/contact" color="primary" class="w-100 mx-auto h-100 py-8 border-md">
+                <p class="text-wrap font-weight-bold text-center text-h4" style="margin: auto;">
+                  REQUEST A COPY OF THE GAME</p>
+            </v-btn>
+          </div>
+     
       </div>
 
 
@@ -132,7 +146,3 @@
     </div>
   </div>
 </template>
-
-<script>
-
-</script>
