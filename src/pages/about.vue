@@ -56,9 +56,9 @@ const { team } = storeToRefs(appStore);
         <div class="d-flex flex-wrap justify-center pb-16">
           <div v-for="(member, index) in team" :key="index" transition="scroll-y-transition">
             <a v-if="member.socialMedia" :href="member.socialMedia" target="_blank"
-              class="text-decoration-none d-flex flex-column align-center justify-center mx-16 my-16"
+              class="text-decoration-none d-flex flex-column align-center justify-center mx-8 my-8"
               style="color: inherit;">
-              <v-avatar size="500" class="mb-3" transition="scroll-y-transition">
+              <v-avatar size="250" class="mb-3" transition="scroll-y-transition">
                 <v-img :src="appStore.methods.getImagePath(member.vImg)" alt="Team Member Image"></v-img>
               </v-avatar>
               <div class="text-nowrap text-secondary-2 text-h3 font-weight-bold">{{ member.name }}</div>

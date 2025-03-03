@@ -27,12 +27,9 @@ useHead({
 
   <div class="bg-secondary align-center" style="min-height: auto;">
     <div class="d-flex flex-column">
-      <div class="w-100">
-        <div class="d-flex flex-wrap justify-center pb-16">
-          <div v-for="(update, index) in updates" :key="index" transition="scroll-y-transition">
-            <router-link :to="`/updatedetail/${update.id}`" class="text-decoration-none">
-              <div class="d-flex flex-column align-center w-100" id="below">
-                <v-card class="w-75 mt-10 border" min-width="md-600" transition="scroll-y-transition">
+          <div v-for="(update, index) in updates" :key="index" class="d-flex flex-column align-center" transition="scroll-y-transition">
+            <router-link :to="`/updatedetail/${update.id}`" class="text-decoration-none d-flex flex-column align-center justify-center w-100">
+                <v-card class="w-75 mt-10 border"  transition="scroll-y-transition">
                   <v-img class="align-end text-white" height="320" :src="appStore.methods.getImagePath(update.cover)" cover>
                     <v-card-title>{{ update.title }}</v-card-title>
                   </v-img>
@@ -52,11 +49,9 @@ useHead({
                     </v-btn>
                   </v-card-actions>
                 </v-card>
-              </div>
             </router-link>
-          </div>
         </div>
-      </div>
+     
     </div>
   </div>
 </template>
