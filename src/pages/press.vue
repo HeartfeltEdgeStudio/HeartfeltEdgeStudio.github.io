@@ -1,22 +1,28 @@
 <script setup>
 import { useAppStore } from '../stores/app';
 import { storeToRefs } from 'pinia';
+import { useHead } from '@vueuse/head'; // Import useHead to modify the page title dynamically
 
 const appStore = useAppStore();
 const { logos } = storeToRefs(appStore);
 const { eventPics } = storeToRefs(appStore);
+
+// Set dynamic page title
+useHead({
+  title: 'Joyful Masks - Factsheet and Game Information'
+});
 </script>
 
 <template>
   <div class="white align-center" style="min-height: auto;" cover>
     <div class="d-flex flex-column">
-
       <div class="w-100">
         <div class="d-flex flex-column justify-center mx-8 my-2 px-16 py-12">
           <v-btn href="/contact" color="primary" class="w-100 mx-auto h-100 py-8 mb-8 border-md">
-                <p class="text-wrap font-weight-bold text-center text-h4" style="margin: auto;">
-                  REQUEST A COPY OF THE GAME</p>
-            </v-btn>
+            <p class="text-wrap font-weight-bold text-center text-h4" style="margin: auto;">
+              REQUEST A COPY OF THE GAME
+            </p>
+          </v-btn>
           <div class="text-nowrap text-secondary text-h3 font-weight-bold">FACTSHEET</div>
 
           <div class="text-nowrap text-secondary text-h5 font-weight-bold pt-2">Quick Pitch</div>
@@ -82,7 +88,7 @@ const { eventPics } = storeToRefs(appStore);
             Step into the mind of Professor Saggi and navigate a world shaped by <span
               class="font-weight-black text-primary">memories, logic, and hidden truths</span>. Joyful Masks blends
             first-person puzzle-solving with narrative-driven exploration, challenging you to <span
-              class="font-weight-black text-primary">untangle the subconsciou</span>s one step at a time.
+              class="font-weight-black text-primary">untangle the subconscious</span> one step at a time.
             <br /><br />
             Each level is a self-contained, evolving space filled with <span
               class="font-weight-black text-primary">intricate puzzles</span> that demand observation, reasoning, and
@@ -126,23 +132,20 @@ const { eventPics } = storeToRefs(appStore);
           </p>
 
           <div class="w-100 text-nowrap text-secondary text-h5 font-weight-bold pt-4 w-50">Icons and Logos, The Team</div>
-            
-            <div v-for="(logo, index) in logos" :key="index" class="d-flex justify-center align-center">
-              <img :src="appStore.methods.getImagePath(logo)" alt="Logo" class="w-50" />
-            </div>
-            <div v-for="(picture, index) in eventPics" :key="index" class="d-flex justify-center align-center">
-              <img :src="appStore.methods.getImagePath(picture)" alt="Digithon" class="w-75 w-md-50 py-8" />
-            </div>
-              <v-btn href="/contact" color="primary" class="w-100 mx-auto h-100 py-8 border-md">
-                <p class="text-wrap font-weight-bold text-center text-h4" style="margin: auto;">
-                  REQUEST A COPY OF THE GAME</p>
-            </v-btn>
+
+          <div v-for="(logo, index) in logos" :key="index" class="d-flex justify-center align-center">
+            <img :src="appStore.methods.getImagePath(logo)" alt="Logo" class="w-50" />
           </div>
-     
+          <div v-for="(picture, index) in eventPics" :key="index" class="d-flex justify-center align-center">
+            <img :src="appStore.methods.getImagePath(picture)" alt="Digithon" class="w-75 w-md-50 py-8" />
+          </div>
+          <v-btn href="/contact" color="primary" class="w-100 mx-auto h-100 py-8 border-md">
+            <p class="text-wrap font-weight-bold text-center text-h4" style="margin: auto;">
+              REQUEST A COPY OF THE GAME
+            </p>
+          </v-btn>
+        </div>
       </div>
-
-
-
     </div>
   </div>
 </template>

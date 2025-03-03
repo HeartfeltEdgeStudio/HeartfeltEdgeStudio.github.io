@@ -1,7 +1,11 @@
 <script setup>
 import { useAppStore } from '../stores/app';
 import { storeToRefs } from 'pinia';
+import { useHead } from '@vueuse/head';
 
+useHead({
+  title: 'Heartfelt Edge Studio - Our Team',
+});
 const appStore = useAppStore();
 const { team } = storeToRefs(appStore);
 </script>
@@ -19,7 +23,8 @@ const { team } = storeToRefs(appStore);
           grown into a tight-knit group of developers, artists, and creatives, all united by the same passion.
           <br /><br />
           Our journey took a big leap forward with <span class="font-weight-black text-decoration-underline">DigithON
-            2024</span>, a defining moment that made us realize just how ambitious our dream was. But determination alone
+            2024</span>, a defining moment that made us realize just how ambitious our dream was. But determination
+          alone
           wasn’t enough—we needed a team that shared our vision. So we went looking… and we found them. Now, we’re
           working together to bring <span class="font-weight-black text-decoration-underline">our first major title to
             life.</span>
@@ -53,7 +58,7 @@ const { team } = storeToRefs(appStore);
             <a v-if="member.socialMedia" :href="member.socialMedia" target="_blank"
               class="text-decoration-none d-flex flex-column align-center justify-center mx-16 my-16"
               style="color: inherit;">
-              <v-avatar size="500" class="mb-3">
+              <v-avatar size="500" class="mb-3" transition="scroll-y-transition">
                 <v-img :src="appStore.methods.getImagePath(member.vImg)" alt="Team Member Image"></v-img>
               </v-avatar>
               <div class="text-nowrap text-secondary-2 text-h3 font-weight-bold">{{ member.name }}</div>

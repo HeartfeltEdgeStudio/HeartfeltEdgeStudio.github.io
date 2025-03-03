@@ -42,7 +42,7 @@
     </div>
 
     <!-- Parallax Section -->
-    <v-parallax :aspect-ratio="1" class="bg-white" src="../assets/art/keyArtNoWatermark.jpg" cover>
+    <v-parallax :aspect-ratio="1" class="bg-white" src="../assets/art/keyArtNoWatermark.jpg" transition="scroll-y-transition" cover>
       <div class="d-flex align-center flex-column">
         <div class="text-nowrap font-weight-black text-primary text-h1 text-center pt-16">Joyful Masks</div>
         <div class="text-nowrap text-primary text-h5 font-weight-thin text-center pt-6">
@@ -142,7 +142,14 @@
 </style>
 
 <script>
+import { useHead } from '@vueuse/head';
+
 export default {
+  setup() {
+    useHead({
+      title: 'Heartfelt Edge Studio - Joyful Masks',
+    });
+  },
   data: () => ({
     overlay: false,
     valid: true,

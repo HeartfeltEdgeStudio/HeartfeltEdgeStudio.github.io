@@ -13,7 +13,11 @@ import App from './App.vue'
 // Composables
 import { createApp } from 'vue'
 
+import { createHead } from '@vueuse/head';
+
 const app = createApp(App)
+
+const head = createHead();
 
 registerPlugins(app)
 

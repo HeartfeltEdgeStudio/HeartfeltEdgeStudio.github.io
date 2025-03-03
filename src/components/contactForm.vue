@@ -1,76 +1,31 @@
 <template>
   <v-sheet border="md" color="primary" class="mx-16 my-6 rounded">
     <form class="bg-secondary-1 pa-4 rounded" @submit.prevent="submitForm">
-      <v-text-field
-        v-model="state.name"
-        :counter="70"
-        :error-messages="v$.name.$errors.map(e => e.$message)"
-        label="Name"
-        required
-        @blur="v$.name.$touch"
-        @input="v$.name.$touch"
-      ></v-text-field>
+      <v-text-field v-model="state.name" :counter="70" :error-messages="v$.name.$errors.map(e => e.$message)"
+        label="Name" required @blur="v$.name.$touch" @input="v$.name.$touch"></v-text-field>
 
-      <v-text-field
-        v-model="state.surname"
-        :counter="70"
-        :error-messages="v$.surname.$errors.map(e => e.$message)"
-        label="Surname"
-        required
-        @blur="v$.surname.$touch"
-        @input="v$.surname.$touch"
-      ></v-text-field>
+      <v-text-field v-model="state.surname" :counter="70" :error-messages="v$.surname.$errors.map(e => e.$message)"
+        label="Surname" required @blur="v$.surname.$touch" @input="v$.surname.$touch"></v-text-field>
 
-      <v-text-field
-        v-model="state.email"
-        :error-messages="v$.email.$errors.map(e => e.$message)"
-        label="E-mail"
-        required
-        @blur="v$.email.$touch"
-        @input="v$.email.$touch"
-      ></v-text-field>
+      <v-text-field v-model="state.email" :error-messages="v$.email.$errors.map(e => e.$message)" label="E-mail"
+        required @blur="v$.email.$touch" @input="v$.email.$touch"></v-text-field>
 
-      <v-select
-        v-model="state.select"
-        :error-messages="v$.select.$errors.map(e => e.$message)"
-        :items="subjects"
-        label="Reason for contact"
-        required
-        @blur="v$.select.$touch"
-        @change="v$.select.$touch"
-      ></v-select>
+      <v-select v-model="state.select" :error-messages="v$.select.$errors.map(e => e.$message)" :items="subjects"
+        label="Reason for contact" required @blur="v$.select.$touch" @change="v$.select.$touch"></v-select>
 
-      <v-textarea 
-        v-model="state.message"
-        :error-messages="v$.message.$errors.map(e => e.$message)"
-        label="Message"
-        required
-        @blur="v$.message.$touch"
-        @input="v$.message.$touch"
-      ></v-textarea >
+      <v-textarea v-model="state.message" :error-messages="v$.message.$errors.map(e => e.$message)" label="Message"
+        required @blur="v$.message.$touch" @input="v$.message.$touch"></v-textarea>
 
-      <v-checkbox
-        v-model="state.dataChoice"
-        :error-messages="v$.dataChoice.$errors.map(e => e.$message)"
+      <v-checkbox v-model="state.dataChoice" :error-messages="v$.dataChoice.$errors.map(e => e.$message)"
         label="By submitting this form, you agree to the collection and processing of your data for the purposes of this request."
-        required
-        @blur="v$.dataChoice.$touch"
-        @change="v$.dataChoice.$touch"
-      ></v-checkbox>
+        required @blur="v$.dataChoice.$touch" @change="v$.dataChoice.$touch"></v-checkbox>
 
-      <v-checkbox
-        v-model="state.newsletter"
-        label="I would like to receive newsletters and updates. You can unsubscribe at any time."
-      ></v-checkbox>
+      <v-checkbox v-model="state.newsletter"
+        label="I would like to receive newsletters and updates. You can unsubscribe at any time."></v-checkbox>
 
       <!-- Loader -->
-      <v-progress-circular
-        v-if="loading"
-        indeterminate
-        color="primary"
-        size="40"
-        class="mx-auto my-4"
-      ></v-progress-circular>
+      <v-progress-circular v-if="loading" indeterminate color="primary" size="40"
+        class="mx-auto my-4"></v-progress-circular>
 
       <v-btn class="me-4" type="submit" :disabled="loading">Submit</v-btn>
       <v-btn @click="clear" :disabled="loading">Clear</v-btn>
@@ -85,6 +40,11 @@
 import { reactive, ref } from 'vue'
 import { useVuelidate } from '@vuelidate/core'
 import { email, required } from '@vuelidate/validators'
+import { useHead } from '@vueuse/head';
+
+useHead({
+  title: 'Heartfelt Edge Studio - Contact Us',
+});
 
 const initialState = {
   name: '',

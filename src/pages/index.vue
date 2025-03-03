@@ -2,7 +2,7 @@
   <div class="d-flex justify-space-around align-center bg-grey-lighten-4 mb-xxl-16">
 
     <v-parallax :aspect-ratio="1" class="bg-white align-center pt-0 pb-lg-16" src="../assets/backgrounds/BgTop.jpg"
-      width="300" height="700" style="margin-bottom: -10vw;" cover>
+      width="300" height="700" style="margin-bottom: -10vw;" transition="scroll-y-transition" cover >
       <div class="d-flex justify-center p-0 mb-md-16 px-5">
         <div class="m-0">
           <div class="text-nowrap text-primary text-h4 text-sm-h2 text-lg-h1">Games From Our Hearts</div>
@@ -18,7 +18,7 @@
     </v-parallax>
   </div>
 
-  <v-parallax src="../assets/backgrounds/BgShape.png" :aspect-ratio="1" class="bg-white align-center"
+  <v-parallax src="../assets/backgrounds/BgShape.png" :aspect-ratio="1" transition="scroll-y-transition" class="bg-white align-center "
     style="min-height: auto; clip-path: polygon(0 3%, 100% 0, 100% 100%, 0% 100%);" cover>
     <div class="w-100">
       <a href="#" @click="onClick" class="text-decoration-none" style="color: inherit;">
@@ -163,10 +163,14 @@
 <script>
 import { useGoTo } from 'vuetify'
 import ConceptArtCarousel from '../components/ConceptArtCarousel.vue';
+import { useHead } from '@vueuse/head';
 
 export default {
   setup() {
     const goTo = useGoTo()
+    useHead({
+      title: 'Heartfelt Edge Studio',
+    });
     return { goTo }
   },
   data() {

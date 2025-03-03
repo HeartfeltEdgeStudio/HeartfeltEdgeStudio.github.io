@@ -4,10 +4,15 @@ import { storeToRefs } from 'pinia';
 import { useRoute } from 'vue-router';
 import { computed } from 'vue';
 import NotFound from '../../components/notFound.vue';
+import { useHead } from '@vueuse/head';
 
 const appStore = useAppStore();
 const { updates } = storeToRefs(appStore);
 const route = useRoute();
+
+useHead({
+  title: 'Joyful Masks - Factsheet and Game Information'
+});
 
 // Find the correct object based on the ID from the URL
 const update = computed(() => {

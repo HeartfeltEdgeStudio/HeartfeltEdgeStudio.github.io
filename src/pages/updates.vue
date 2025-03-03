@@ -1,9 +1,15 @@
 <script setup>
 import { useAppStore } from '../stores/app';
 import { storeToRefs } from 'pinia';
+import { useHead } from '@vueuse/head';  // Import useHead
 
 const appStore = useAppStore();
 const { updates } = storeToRefs(appStore);
+
+// Set the page title dynamically
+useHead({
+  title: 'Updates - Stay Informed with Our Game Dev Journey'
+});
 </script>
 
 <template>
