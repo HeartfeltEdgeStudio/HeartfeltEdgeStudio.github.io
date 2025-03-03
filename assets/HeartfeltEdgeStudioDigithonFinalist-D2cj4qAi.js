@@ -1,1 +1,0 @@
-import{_ as e}from"./dynamicPageTemplate-BIaVLs6n.js";import{_ as o,F as c,Q as n}from"./index-BNO7HkFI.js";import"./notFound-C8vQ6wNC.js";import"./app-0EziI8fR.js";const r={};function a(_,i){const t=e;return n(),c(t)}const l=o(r,[["render",a]]);export{l as default};
