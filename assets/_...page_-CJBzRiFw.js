@@ -1,0 +1,1 @@
+import{N as o}from"./notFound-D4pt1dPp.js";import{P as e,O as r,q as t,D as a}from"./index-DHGh4Zxa.js";import"./_plugin-vue_export-helper-DlAUqK2U.js";import"./VImg-D_VBOhJ7.js";import"./VAvatar-C24OmV_M.js";const f=e({__name:"[...page]",setup(s){return r({title:"Joyful Masks - Error"}),(p,m)=>(a(),t(o))}});export{f as default};
