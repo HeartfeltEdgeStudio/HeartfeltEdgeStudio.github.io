@@ -71,9 +71,8 @@ const getImagePath = (image) => {
       <!-- Image Carousel with Clickable Images for Overlay -->
       <div class="w-75 w-sm-50 mb-16 rounded pa-2" style="background: rgba(141, 198, 63, 0.15);"
         v-if="update.images && update.images.length > 0">
-        <v-carousel class="bg-secondary">
-          <v-carousel-item v-for="(image, index) in update.images" :key="index">
-            <v-img :src="getImagePath(image)" @click="openOverlay(image)" class="cursor-pointer"></v-img>
+        <v-carousel class="bg-secondary elevation-9">
+          <v-carousel-item  v-for="(image, index) in update.images" :key="index"  :src="getImagePath(image)" @click="openOverlay(image)" >
           </v-carousel-item>
         </v-carousel>
       </div>
