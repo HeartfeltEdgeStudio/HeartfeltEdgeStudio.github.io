@@ -10,13 +10,15 @@ import Vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
 // Utilities
 import { defineConfig } from 'vite'
 import { fileURLToPath, URL } from 'node:url'
+import Pages from 'vite-plugin-pages'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/HeartfeltEdgeStudio.github.io/',
+  base: '/',
   plugins: [
     VueRouter(),
     Layouts(),
+	Pages(),
     Vue({
       template: { transformAssetUrls }
     }),
