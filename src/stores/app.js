@@ -4,6 +4,8 @@ import { defineStore } from 'pinia'
 export const useAppStore = defineStore('app', {
   state: () => ({
     logos: [
+      "logos/JoyfulMasksLogoBlack.png",
+      "logos/JoyfulMasksLogoWhite.png",
       "logos/HeartfeltEdgeStudio-02.png",
       "logos/HeartfeltEdgeStudio.png",
       "logos/HeartfeltEdgeStudio2.jpg",
@@ -87,13 +89,22 @@ export const useAppStore = defineStore('app', {
     ],
     updates: [
       {
+        id: "Svilupparty2025Announcement",
+        title: "Svilupparty 2025",
+        date: "2025-04-14",
+        body: "We’re excited to announce that Joyful Masks will be at Svilupparty 2025 in Bologna! Join us at our booth where we’ll be showcasing an exclusive demo of our latest game. We’ll also be releasing a brand-new trailer, giving you a first look at what's coming next. Don’t miss out on the chance to grab some cool gadgets and goodies while you’re there. Whether you’re a developer, a player, or just curious about what we’ve been working on, we’d love to meet you in person. Svilupparty 2025 – Bologna Look for the Joyful Masks booth and come say hi! #Svilupparty2025 #JoyfulMasks #IndieGames #GameDev #BolognaEvents",
+        cover: "https://www.ipid.dev/wp-content/uploads/2021/01/svilupparty_small-1.png",
+        button: "Come Say Hello!",
+        links: [["Official Event Link", "https://www.ipid.dev/svilupparty"]]
+      },
+      {
         id: "HeartfeltEdgeStudioDigithonFinalist",
         title: "Heartfelt Edge Studio is a Digithon finalist",
         date: "2024-09-19",
         subtitle: "Digithon 2024",
-        body: " We’re thrilled to be among the top 100 startups selected for Digithon 2024! We’re excited to showcase our ideas, connect with industry leaders, and gain valuable feedback. This opportunity will help us demonstrate our unique concepts and build relationships with fellow innovators who share our passion for transforming the gaming world. ",
+        body: "We’re thrilled to be among the top 100 startups selected for Digithon 2024! We’re excited to showcase our ideas, connect with industry leaders, and gain valuable feedback. This opportunity will help us demonstrate our unique concepts and build relationships with fellow innovators who share our passion for transforming the gaming world.",
         cover: "miscellaneous/digithonAnn.jpg",
-        button: "View the announcement",
+        button: "View The Announcement",
         images: ["pics/digithonPic.png", "pics/digithon1.jpeg", "pics/digithon2.jpeg", "pics/digithon3.jpeg"],
         links: [["Check out the finalists!", "https://www.digithon.it/finalists"]]
       },
@@ -101,7 +112,7 @@ export const useAppStore = defineStore('app', {
         id: "HeartfeltEdgeStudioDigithonSelection",
         title: "Digithon 2024",
         date: "2024-07-16",
-        body: " We applied for Digithon 2024, eager to showcase our innovative gaming solutions. Participating in Digithon 2024 will allow us to network with industry leaders, gain invaluable feedback, and attract potential collaboratos. We're excited about the opportunity to demonstrate our unique gaming concepts and connect with like-minded professionals who share our passion for revolutionizing the gaming industry.",
+        body: "We applied for Digithon 2024, eager to showcase our innovative gaming solutions. Participating in Digithon 2024 will allow us to network with industry leaders, gain invaluable feedback, and attract potential collaboratos. We're excited about the opportunity to demonstrate our unique gaming concepts and connect with like-minded professionals who share our passion for revolutionizing the gaming industry.",
         cover: "miscellaneous/digithonLogo1.jpg",
         button: "View Our Startup",
         links: [["Check out our pitch!", "https://www.digithon.it/startups/2228/heartfelt-edge-studio"]]
@@ -109,7 +120,12 @@ export const useAppStore = defineStore('app', {
     ],
     methods: {
       getImagePath(imagePath) {
-        return new URL(`../assets/${imagePath}`, import.meta.url).href;
+        try {
+          new URL(imagePath);
+          return imagePath;
+        } catch (e) {
+          return new URL(`../assets/${imagePath}`, import.meta.url).href;
+        }
       }
     }
   }),

@@ -1,17 +1,26 @@
 <template>
   <v-footer class="bg-secondary-1 text-center d-flex flex-column">
-    <v-form ref="form" v-model="valid" lazy-validation class="w-md-50 w-75">
+    <v-form ref="form" lazy-validation class="w-md-50 w-75"
+      action="https://heartfeltedgestudio.us16.list-manage.com/subscribe/post?u=599738d46e1d892b9f695a0f6&amp;id=fc6bc1565f&amp;f_id=00c6c2e1f0"
+      method="POST" target="_blank">
       <div class="px-4 pt-4 d-sm-flex align-center">
-        <v-text-field label="E-mail" placeholder="youremail@email.com" outlined v-model="email"
-          :rules="emailRules"></v-text-field>
+        <v-text-field label="E-mail" placeholder="youremail@email.com" outlined v-model="email" :rules="emailRules"
+          name="EMAIL" type="email" required></v-text-field>
+
         <v-col cols="12" sm="auto" class="pa-0 pl-sm-5 pb-6 mt-sm-0 mt-1">
-          <v-btn color="primary" @click="validate" class="w-100 h-100 py-4 ">
+          <v-btn color="primary" type="submit" class="w-100 h-100 py-4">
             <p class="text-wrap text-left" style="margin: auto;">
-              Claim Exclusive Access</p>
+              Claim Exclusive Access
+            </p>
           </v-btn>
         </v-col>
       </div>
+
+      <!-- Hidden anti-bot field Mailchimp uses -->
+      <input type="text" name="b_599738d46e1d892b9f695a0f6_fc6bc1565f" tabindex="-1" value=""
+        style="position: absolute; left: -5000px;" aria-hidden="true">
     </v-form>
+
 
     <p class="pt-2">
       Made In Italy

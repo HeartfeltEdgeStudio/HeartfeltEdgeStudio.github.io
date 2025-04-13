@@ -22,32 +22,42 @@ const nonMobileStyles = computed(() => {
         <div class="d-flex justify-end">
           <v-icon icon="$cancel" @click="overlay = false"></v-icon>
         </div>
+
         <v-card-item>
           <div class="d-flex flex-column">
             <div class="text-h4 mb-1 font-weight-bold">
               Claim Exclusive Access
             </div>
-            <div class="text-h6 font-weight-regular">Step into the Unknown—First.
-              Get exclusive updates, a chance to win a spot for <span class="font-weight-bold text-primary">early
-                access to the demo</span>, and a deeper look into the world of Joyful Masks.
+            <div class="text-h6 font-weight-regular">
+              Step into the Unknown—First.
+              Get exclusive updates, a chance to win a spot for
+              <span class="font-weight-bold text-primary">early access to the demo</span>,
+              and a deeper look into the world of Joyful Masks.
               Sign up now and be among the first to uncover the mysteries waiting beneath the surface.
             </div>
           </div>
         </v-card-item>
 
         <v-card-actions class="d-flex flex-column align-center justify-center">
-          <v-form ref="form" class="w-100" v-model="valid" lazy-validation>
-            <div class="">
-              <v-text-field label="E-mail" placeholder="youremail@email.com" outlined v-model="email"
-                :rules="emailRules"></v-text-field>
-              <v-btn @click="validate" class="w-100 h-100 py-4 mt-2 bg-primary elevation-9">
-                <p class="text-wrap text-left" style="margin: auto;">
-                  Give me some cool content!</p>
-              </v-btn>
-            </div>
-          </v-form> </v-card-actions>
+          <form ref="form" class="w-100"
+            action="https://heartfeltedgestudio.us16.list-manage.com/subscribe/post?u=599738d46e1d892b9f695a0f6&amp;id=fc6bc1565f&amp;f_id=00c6c2e1f0"
+            method="POST" target="_blank">
+            <v-text-field label="E-mail" placeholder="youremail@email.com" outlined v-model="email" :rules="emailRules"
+              name="EMAIL" type="email" required></v-text-field>
+
+            <input type="text" name="b_599738d46e1d892b9f695a0f6_fc6bc1565f" tabindex="-1" value=""
+              style="position: absolute; left: -5000px;" aria-hidden="true">
+
+            <v-btn type="submit" class="w-100 h-100 py-4 mt-2 bg-primary elevation-9">
+              <p class="text-wrap text-left" style="margin: auto;">
+                Give me some cool content!
+              </p>
+            </v-btn>
+          </form>
+        </v-card-actions>
       </v-card>
     </v-overlay>
+
     <!-- Sticky Button -->
     <div ref="stickyButton" class="sticky-button elevation-9">
       <v-btn color="primary" @click="overlay = !overlay" class="mx-auto py-2 py-sm-4" style="height: fit-content;">
@@ -88,6 +98,10 @@ const nonMobileStyles = computed(() => {
               "What are you hiding
               from yourself?"</div>
 
+            <div class="d-flex flex-column align-center pb-10">
+              <v-img src="../assets/logos/JoyfulMasksLogoBlack.png" class="w-75" contain />
+            </div>
+
             <div class="text-nowrap text-secondary text-h5 font-weight-bold">The Story</div>
             <p class="text-secondary text-body-1">
               In a university lab, an experiment pushes the boundaries of neuroscience—and ethics. Professor Alberto
@@ -121,6 +135,7 @@ const nonMobileStyles = computed(() => {
               Unlock deeper truths - <span class="font-weight-bold text-primary">join our mailing list</span> for
               exclusive updates, hidden insights, and a glimpse into what lies beneath.
             </div>
+
           </div>
         </div>
       </div>

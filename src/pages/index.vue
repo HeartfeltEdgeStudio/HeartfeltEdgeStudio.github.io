@@ -108,7 +108,7 @@
       </v-card>
     </div>
 
-    <div class="d-flex flex-column align-center w-100 elevation-9"><router-link :to="`/updates`"
+    <div class="d-flex flex-column align-center w-100"><router-link :to="`/updates`"
         class="text-decoration-none d-flex flex-column align-center justify-center w-100">
         <v-card class="w-75 my-10 border" transition="scroll-y-transition" subtitle="News about our projects and events"
           text="See what’s going on with our game dev journey! If you’d like to get updates about events and new content, subscribe to our newsletter!"
@@ -126,7 +126,7 @@
 <style scoped>
 /* Default for xl screens (≥ 1904px) */
 .responsive-margin {
-  padding-top: 2%;
+  padding-top: 4%;
 }
 
 /* lg screens (≥ 1264px and < 1904px) */
