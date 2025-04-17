@@ -34,6 +34,7 @@ export default {
       { title: 'Contact Us', path: '/contact' },
       { title: 'Updates', path: '/updates' },
       { title: 'Press', path: '/press' },
+      { title: 'Privacy Policy', path: '/policy' },
     ],
   }),
   methods: {

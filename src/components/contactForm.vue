@@ -68,6 +68,7 @@ const subjects = [
   'General Inquiry',
   'Event Participation',
   'Job Vacancy Inquiry',
+  'Data & Privacy Request',
 ]
 
 const rules = {
