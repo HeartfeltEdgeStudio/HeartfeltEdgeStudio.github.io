@@ -71,8 +71,8 @@ const nonMobileStyles = computed(() => {
     <v-img class="bg-white" src="../assets/art/keyArt.png"
       transition="scroll-y-transition" cover>
       <div class="d-flex align-center flex-column">
-        <div class="text-nowrap font-weight-black text-primary text-h1 text-center pt-16">Joyful Masks</div>
-        <div class="text-nowrap text-primary text-h5 font-weight-thin text-center pt-6">
+        <div class="text-nowrap font-weight-black text-primary text-sm-h1 text-h2 text-center pt-6 pt-md-16">Joyful Masks</div>
+        <div class="text-nowrap text-primary text-h5 font-weight-thin text-center pt-1 pt-sm-6">
           "Unlock the Secrets of the Mind"
         </div>
       </div>
