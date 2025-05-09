@@ -1,0 +1,1 @@
+import{N as e}from"./notFound-BAWmJ9Pi.js";import{bT as o,a4 as a,G as r,R as t}from"./index-C4BCN138.js";const m=o({__name:"[...page]",setup(s){return a({title:"Joyful Masks - Error"}),(n,p)=>(t(),r(e))}});export{m as default};
