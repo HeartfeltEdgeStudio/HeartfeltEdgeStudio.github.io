@@ -40,7 +40,7 @@ export const useAppStore = defineStore('app', {
       },
       {
         name: "Francesco Gentile",
-        role: "Game Developer, Project Manager",
+        role: "Game Designer",
         vImg: "team/francescoG.jpg",
         socialMedia: "https://www.linkedin.com/in/francesco-gentile-6768391b3/"
       },
@@ -64,7 +64,7 @@ export const useAppStore = defineStore('app', {
       },
       {
         name: "Nicole Antoniolli",
-        role: "Game Artist, 3D Modeling",
+        role: "Game Artist, 3D Modeler",
         vImg: "team/nicoleA.jpg",
         socialMedia: "https://www.linkedin.com/in/nicole-antoniolli-13b52186/"
       },

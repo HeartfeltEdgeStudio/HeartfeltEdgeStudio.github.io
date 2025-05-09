@@ -68,7 +68,7 @@ const nonMobileStyles = computed(() => {
     </div>
 
     <!-- Parallax Section -->
-    <v-parallax :aspect-ratio="1" class="bg-white" src="../assets/art/keyArtNoWatermark.jpg"
+    <v-img class="bg-white" src="../assets/art/keyArt.png"
       transition="scroll-y-transition" cover>
       <div class="d-flex align-center flex-column">
         <div class="text-nowrap font-weight-black text-primary text-h1 text-center pt-16">Joyful Masks</div>
@@ -76,7 +76,7 @@ const nonMobileStyles = computed(() => {
           "Unlock the Secrets of the Mind"
         </div>
       </div>
-    </v-parallax>
+    </v-img>
 
     <!-- Main Content -->
     <div ref="contentSection" class="content">

@@ -116,7 +116,7 @@ async function zipAndDownload() {
             Reality is shifting. Can you make sense of it?
           </p>
 
-          <v-img class="align-end text-justify text-white my-10" height="700" src="../assets/art/keyArt.jpg"
+          <v-img class="align-end text-justify text-white my-10" height="700" src="../assets/art/keyArt.png"
             cover></v-img>
 
           <div class="text-nowrap text-secondary text-h5 font-weight-bold pt-2">Watch the <span
