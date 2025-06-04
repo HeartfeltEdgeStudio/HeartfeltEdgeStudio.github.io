@@ -82,7 +82,7 @@ export default {
       target: 'By Number',
       easing: 'easeInOutCubic',
       icons: [
-        { name: "mdi-facebook", link: "https://www.facebook.com/heartfeltedgestudio" },
+        { name: "mdi-facebook", link: "https://www.facebook.com/profile.php?id=61561683022764" },
         { name: "mdi-twitter", link: "https://x.com/HeartfeltEdge?t=WLcw-rhlCxO61F19nIWHaA&s=09" },
         { name: "mdi-linkedin", link: "https://www.linkedin.com/company/heartfelt-edge-studio" },
         { name: "mdi-instagram", link: "https://www.instagram.com/heartfeltedgestudio" },

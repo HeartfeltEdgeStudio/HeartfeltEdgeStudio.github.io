@@ -1,18 +1,24 @@
 <template>
   <div>
     <v-carousel class="bg-secondary elevation-9">
-      <v-carousel-item src="../assets/art/conceptTrophyStudy.png"
-        @click="openOverlay('conceptTrophyStudy.png')"></v-carousel-item>
+        
+      <v-carousel-item src="../assets/screenshots/study_window_view.png" cover
+        @click="openOverlay('study_window_view.png')"></v-carousel-item>
 
-      <v-carousel-item src="../assets/art/albertoCharacter.png"
-        @click="openOverlay('albertoCharacter.png')"></v-carousel-item>
+      <v-carousel-item src="../assets/screenshots/tv_puzzle.png" cover
+        @click="openOverlay('tv_puzzle.png')"></v-carousel-item>
+        
+      <v-carousel-item src="../assets/screenshots/postit_wall.png" cover
+        @click="openOverlay('postit_wall.png')"></v-carousel-item>
 
-      <v-carousel-item src="../assets/art/watch.png" cover @click="openOverlay('watch.png')"></v-carousel-item>
+      <v-carousel-item src="../assets/screenshots/storage_birds_eye_view.png" cover
+        @click="openOverlay('storage_birds_eye_view.png')"></v-carousel-item>
 
-      <v-carousel-item src="../assets/art/screenDeskModel.png" cover
-        @click="openOverlay('screenDeskModel.png')"></v-carousel-item>
+      <v-carousel-item src="../assets/screenshots/recording_device.png" cover
+        @click="openOverlay('recording_device.png')"></v-carousel-item>
 
-      <v-carousel-item src="../assets/art/trophyModel.png" @click="openOverlay('trophyModel.png')"></v-carousel-item>
+      <v-carousel-item src="../assets/screenshots/vfx_picture.png" cover
+        @click="openOverlay('vfx_picture.png')"></v-carousel-item>
     </v-carousel>
 
     <!-- Overlay Dialog -->
@@ -43,7 +49,8 @@ export default {
     };
 
     const getImagePath = (imageName) => {
-      return new URL(`../assets/art/${imageName}`, import.meta.url).href;
+      console.log(imageName);
+      return new URL(`../assets/screenshots/${imageName}`, import.meta.url).href;
     };
 
     return { dialog, selectedImage, openOverlay, getImagePath };

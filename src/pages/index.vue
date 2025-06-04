@@ -36,6 +36,30 @@
     </div>
 
     <div class="d-flex flex-column align-center w-100" id="below">
+      <a href="https://store.steampowered.com/app/3778530/Joyful_Masks/" target="_blank" rel="noopener" class="text-decoration-none d-flex flex-column align-center justify-center w-100">
+        <v-card class="w-75 mt-10 border elevation-9" transition="scroll-y-transition">
+          <v-img class="align-end text-white" height="320" src="../assets/screenshots/postit_wall.png" cover>
+            <v-card-title>Joyful Masks</v-card-title>
+          </v-img>
+
+          <v-card-subtitle class="pt-4">
+            Wishlist now
+          </v-card-subtitle>
+
+          <v-card-text>
+            <div>Check out our Steam page! We promise you won't regret it.</div>
+          </v-card-text>
+
+          <v-card-actions>
+            <v-btn color="primary" :to="'/about'" append-icon="mdi-arrow-right" class="h-100">
+              <p class="text-wrap text-left" style="margin: auto;">
+                Wishlist our game on steam</p>
+            </v-btn>
+          </v-card-actions>
+        </v-card></a>
+    </div>
+
+    <div class="d-flex flex-column align-center w-100" id="below">
       <router-link :to="`/about`" class="text-decoration-none d-flex flex-column align-center justify-center w-100">
         <v-card class="w-75 mt-10 border elevation-9" transition="scroll-y-transition">
           <v-img class="align-end text-white" height="320" src="../assets/pics/digithonPic.png" cover>

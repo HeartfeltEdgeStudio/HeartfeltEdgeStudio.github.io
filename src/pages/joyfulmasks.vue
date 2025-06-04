@@ -30,8 +30,8 @@ const nonMobileStyles = computed(() => {
             </div>
             <div class="text-h6 font-weight-regular">
               Step into the Unknown—First.
-              Get exclusive updates, a chance to win a spot for
-              <span class="font-weight-bold text-primary">early access to the demo</span>,
+              Get exclusive updates, a chance to win
+              <span class="font-weight-bold text-primary">a copy of the game</span>,
               and a deeper look into the world of Joyful Masks.
               Sign up now and be among the first to uncover the mysteries waiting beneath the surface.
             </div>
@@ -68,10 +68,10 @@ const nonMobileStyles = computed(() => {
     </div>
 
     <!-- Parallax Section -->
-    <v-img class="bg-white" src="../assets/art/keyArt.png"
-      transition="scroll-y-transition" cover>
-      <div class="d-flex align-center flex-column">
-        <div class="text-nowrap font-weight-black text-primary text-sm-h1 text-h2 text-center pt-6 pt-md-16">Joyful Masks</div>
+    <v-img class="bg-white align-center align-md-start" src="../assets/art/keyArt.png" transition="scroll-y-transition"
+      cover>
+      <div class="d-flex flex-column bg-black px-3 py-3 my-3 w-50 py-md-16 mx-auto rounded-lg opacity-80">
+        <div class="text-nowrap font-weight-black text-primary text-sm-h1 text-h2 text-center">Joyful Masks</div>
         <div class="text-nowrap text-primary text-h5 font-weight-thin text-center pt-1 pt-sm-6">
           "Unlock the Secrets of the Mind"
         </div>
@@ -89,11 +89,11 @@ const nonMobileStyles = computed(() => {
               Watch the <span class="font-weight-black text-primary">trailer</span> and see the adventure unfold.
             </p>
 
-            <div
-              class="bg-secondary-1 elevation-9 d-flex justify-center mt-4 align-center font-weight-bold text-subtitle-1"
-              style="height: 30vh;">Coming Soon!
+            <div class="bg-black d-flex  mt-4 w-100 h-100"
+              style="position: relative;padding-bottom: 56.25%; height: 0;">
+              <iframe style=" position: absolute;top: 0; left: 0;  width: 100%;height: 100%;"
+                src="https://www.youtube.com/embed/WUKgRZFUgSw"></iframe>
             </div>
-
             <div class="text-nowrap text-primary text-h3 py-10 font-weight-bold">
               "What are you hiding
               from yourself?"</div>

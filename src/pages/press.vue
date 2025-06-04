@@ -7,7 +7,8 @@ import JSZip from 'jszip'; // Import JSZip library
 const appStore = useAppStore();
 const { logos } = storeToRefs(appStore);
 const { eventPics } = storeToRefs(appStore);
-
+const { screenshots } = storeToRefs(appStore);
+const { art } = storeToRefs(appStore);
 // Set dynamic page title
 useHead({
   title: 'Joyful Masks - Factsheet and Game Information'
@@ -39,9 +40,23 @@ async function zipAndDownload() {
     }
   };
 
+  const addUrlShortcutsToZip = (zipInstance, links) => {
+    for (const { name, url } of links) {
+      if (!name || !url) {
+        console.warn('Invalid link format:', { name, url });
+        continue;
+      }
+      const urlShortcutContent = `[InternetShortcut]\nURL=${url}`;
+      zipInstance.file(`${name}.url`, urlShortcutContent);
+    }
+  };
+
   // Add logos and eventPics to the zip file using .value to access the actual arrays
   await addImagesToZip(logos.value, 'logos');
   await addImagesToZip(eventPics.value, 'eventPics');
+  await addImagesToZip(screenshots.value, 'screenshots');
+  await addImagesToZip(art.value, 'art');
+  addUrlShortcutsToZip(zip, [{ name: 'JoyfulMasksTrailer', url: 'https://www.youtube.com/watch?v=WUKgRZFUgSw' },{ name: 'SteamPage', url: 'https://store.steampowered.com/app/3778530/Joyful_Masks/' },]);
 
   // Generate the zip file
   zip.generateAsync({ type: 'blob' })
@@ -49,7 +64,7 @@ async function zipAndDownload() {
       // Trigger the download of the zip file
       const link = document.createElement('a');
       link.href = URL.createObjectURL(content);
-      link.download = 'assets_folder.zip';
+      link.download = 'presskit.zip';
       link.click();
     })
     .catch((error) => {
@@ -101,29 +116,30 @@ async function zipAndDownload() {
           <div class="text-nowrap text-secondary text-h5 font-weight-bold pt-4">Release & Development</div>
           <p class="text-secondary text-justify text-body-1">
             Joyful Masks is currently in <span class="font-weight-black text-primary">pre-alpha</span>, with a demo
-            coming soon! We’re planning for a full release in Q4 of 2025 and are fully committed to bringing this
+            coming soon! We’re planning for a full release for this November and are fully committed to bringing this
             experience to life on our own terms. Every detail is being crafted with care to ensure a haunting and
             immersive journey.
           </p>
 
           <div class="text-nowrap text-secondary text-h5 font-weight-bold pt-4">Playtime</div>
           <p class="text-secondary text-justify text-body-1">
-            Joyful Masks is a richly atmospheric, story-driven experience. With seven levels, each taking around 30–40
-            minutes, a full playthrough will last <span class="font-weight-black text-primary">approximately four
+            Joyful Masks is a richly atmospheric, story-driven experience. With several levels, each taking around 30–60
+            minutes, a full playthrough will last <span class="font-weight-black text-primary">approximately five to six
               hours</span>.<br /><br />
             As you navigate the depths of the mind, expect a journey filled with thought-provoking puzzles, quiet
             tension, and the unraveling of a deeply personal story.<br /><br />
             Reality is shifting. Can you make sense of it?
           </p>
 
-          <v-img class="align-end text-justify text-white my-10" height="700" src="../assets/art/keyArt.png"
-            cover></v-img>
+          <v-img class="align-end text-justify text-white my-10" height="700" src="../assets/art/keyArt.png" cover></v-img>
 
           <div class="text-nowrap text-secondary text-h5 font-weight-bold pt-2">Watch the <span
               class="font-weight-black text-primary">trailer</span></div>
 
-          <div class="bg-secondary-1 d-flex justify-center align-center font-weight-bold text-subtitle-1"
-            style="height: 30vh;">Coming Soon!</div>
+          <div class="bg-black d-flex  mt-4 w-100 h-100" style="position: relative; padding-bottom: 56.25%;height: 0;">
+            <iframe style=" position: absolute;top: 0;left: 0;width: 100%;height: 100%;"
+              src="https://www.youtube.com/embed/WUKgRZFUgSw"></iframe>
+          </div>
 
           <div class="text-nowrap text-secondary text-h5 font-weight-bold pt-4">Gameplay</div>
           <p class="text-secondary text-justify text-body-1">
@@ -145,6 +161,7 @@ async function zipAndDownload() {
           </p>
 
           <div class="text-nowrap text-secondary text-h5 font-weight-bold pt-4">Aesthetic</div>
+            <v-img class="align-end text-justify text-white my-2" height="700" src="../assets/art/university.jpg" cover></v-img>
           <p class="text-secondary text-justify text-body-1">
             Joyful Masks draws from a rich <span class="font-weight-black text-primary">Italian atmosphere</span>,
             blending the warmth of cozy, sunlit spaces with the quiet mystery of overgrown courtyards and forgotten
@@ -195,43 +212,3 @@ async function zipAndDownload() {
     </div>
   </div>
 </template>
-
-<script>
-// Import necessary modules
-import { useAppStore } from '../stores/app';
-import JSZip from 'jszip'; // Import JSZip library
-
-// Function to zip logos and eventPics and download them
-async function zipAndDownload() {
-  const appStore = useAppStore();  // Initialize appStore here
-  const zip = new JSZip();
-
-  // Access logos and eventPics from appStore directly
-  const logos = appStore.logos;
-  const eventPics = appStore.eventPics;
-
-  // Function to add images to the zip
-  const addImagesToZip = async (images, folderName) => {
-    for (let image of images) {
-      const imagePath = appStore.methods.getImagePath(image);
-      const response = await fetch(imagePath);
-      const blob = await response.blob();
-      zip.file(`${folderName}/${image}`, blob);
-    }
-  };
-
-  // Add logos and eventPics to the zip file
-  await addImagesToZip(logos, 'logos');
-  await addImagesToZip(eventPics, 'eventPics');
-
-  // Generate the zip file
-  zip.generateAsync({ type: 'blob' })
-    .then(function (content) {
-      // Trigger the download of the zip file
-      const link = document.createElement('a');
-      link.href = URL.createObjectURL(content);
-      link.download = 'assets_folder.zip';
-      link.click();
-    });
-}
-</script>
