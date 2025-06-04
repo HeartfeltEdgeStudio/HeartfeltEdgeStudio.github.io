@@ -1,0 +1,1 @@
+import{N as e}from"./notFound-DoodMTG6.js";import{bX as o,a4 as a,G as r,R as t}from"./index--oGk7Rnd.js";const m=o({__name:"[...page]",setup(s){return a({title:"Joyful Masks - Error"}),(n,p)=>(t(),r(e))}});export{m as default};
