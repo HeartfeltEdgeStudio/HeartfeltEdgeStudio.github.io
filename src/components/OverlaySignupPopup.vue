@@ -66,7 +66,7 @@ export default {
   computed: {
     popupCardStyles() {
       return {
-        width: "100%",
+        width: "90%",
         maxWidth: "500px"
       };
     }
