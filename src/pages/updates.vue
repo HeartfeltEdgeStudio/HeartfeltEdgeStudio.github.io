@@ -13,6 +13,7 @@ useHead({
 </script>
 
 <template>
+  <OverlaySignupPopup :delay="4000" />
   <v-sheet border="b-md" color="secondary-2">
     <div class="bg-primary d-flex justify-center px-6 py-16">
       <div>

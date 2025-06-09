@@ -56,7 +56,7 @@ async function zipAndDownload() {
   await addImagesToZip(eventPics.value, 'eventPics');
   await addImagesToZip(screenshots.value, 'screenshots');
   await addImagesToZip(art.value, 'art');
-  addUrlShortcutsToZip(zip, [{ name: 'JoyfulMasksTrailer', url: 'https://www.youtube.com/watch?v=WUKgRZFUgSw' },{ name: 'SteamPage', url: 'https://store.steampowered.com/app/3778530/Joyful_Masks/' },]);
+  addUrlShortcutsToZip(zip, [{ name: 'JoyfulMasksTrailer', url: 'https://www.youtube.com/watch?v=WUKgRZFUgSw' }, { name: 'SteamPage', url: 'https://store.steampowered.com/app/3778530/Joyful_Masks/' },]);
 
   // Generate the zip file
   zip.generateAsync({ type: 'blob' })
@@ -75,7 +75,9 @@ async function zipAndDownload() {
 
 
 <template>
+  <OverlaySignupPopup :delay="4000" />
   <div class="white align-center" style="min-height: auto;" cover>
+
     <div class="d-flex flex-column">
       <div class="w-100">
         <div class="d-flex flex-column justify-center mx-6 mx-sm-8 my-2 py-12">
@@ -131,7 +133,8 @@ async function zipAndDownload() {
             Reality is shifting. Can you make sense of it?
           </p>
 
-          <v-img class="align-end text-justify text-white my-10" height="700" src="../assets/art/keyArt.png" cover></v-img>
+          <v-img class="align-end text-justify text-white my-10" height="700" src="../assets/art/keyArt.png"
+            cover></v-img>
 
           <div class="text-nowrap text-secondary text-h5 font-weight-bold pt-2">Watch the <span
               class="font-weight-black text-primary">trailer</span></div>
@@ -161,7 +164,8 @@ async function zipAndDownload() {
           </p>
 
           <div class="text-nowrap text-secondary text-h5 font-weight-bold pt-4">Aesthetic</div>
-            <v-img class="align-end text-justify text-white my-2" height="700" src="../assets/art/university.jpg" cover></v-img>
+          <v-img class="align-end text-justify text-white my-2" height="700" src="../assets/art/university.jpg"
+            cover></v-img>
           <p class="text-secondary text-justify text-body-1">
             Joyful Masks draws from a rich <span class="font-weight-black text-primary">Italian atmosphere</span>,
             blending the warmth of cozy, sunlit spaces with the quiet mystery of overgrown courtyards and forgotten

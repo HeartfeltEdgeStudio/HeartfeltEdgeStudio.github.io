@@ -11,6 +11,7 @@ const { team } = storeToRefs(appStore);
 </script>
 
 <template>
+  <OverlaySignupPopup :delay="4000" />
   <v-sheet border="b-md"color="secondary-2">
     <div class="bg-primary d-flex justify-center px-6 px-sm-16 py-16">
       <div>

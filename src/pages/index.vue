@@ -1,4 +1,5 @@
 <template>
+  <OverlaySignupPopup :delay="4000" />
   <div class="d-flex justify-space-around align-center bg-grey-lighten-4 mb-n10 mb-xxl-16">
 
     <v-parallax :aspect-ratio="1" class="bg-white align-center pt-0 pb-lg-16" src="../assets/backgrounds/BgTop.jpg"
@@ -18,7 +19,6 @@
       </div>
     </v-parallax>
   </div>
-
   <v-parallax src="../assets/backgrounds/BgShape.png" :aspect-ratio="1" transition="scroll-y-transition"
     class="bg-white d-flex align-center elevation-9"
     style="min-height: auto; clip-path: polygon(0 3%, 100% 0, 100% 100%, 0% 100%);" cover>

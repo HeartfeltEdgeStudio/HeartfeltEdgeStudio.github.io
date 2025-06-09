@@ -16,6 +16,7 @@ const nonMobileStyles = computed(() => {
 </script>
 
 <template>
+  <OverlaySignupPopup :delay="4000" />
   <div ref="pageContainer" class="page-container">
     <v-overlay :absolute="absolute" v-model="overlay" class="align-center justify-center overflow-auto">
       <v-card :style="nonMobileStyles">
@@ -29,11 +30,9 @@ const nonMobileStyles = computed(() => {
               Claim Exclusive Access
             </div>
             <div class="text-h6 font-weight-regular">
-              Step into the Unknown—First.
-              Get exclusive updates, a chance to win
-              <span class="font-weight-bold text-primary">a copy of the game</span>,
-              and a deeper look into the world of Joyful Masks.
-              Sign up now and be among the first to uncover the mysteries waiting beneath the surface.
+              Unlock hidden secrets and gain exclusive access to untold stories from the world of Joyful Masks.
+              Sign up now and <span class="font-weight-bold text-primary">be one of the few to reveal what lies beneath
+                the surface</span>.
             </div>
           </div>
         </v-card-item>
@@ -60,12 +59,18 @@ const nonMobileStyles = computed(() => {
 
     <!-- Sticky Button -->
     <div ref="stickyButton" class="sticky-button elevation-9">
-      <v-btn color="primary" @click="overlay = !overlay" class="mx-auto py-2 py-sm-4" style="height: fit-content;">
-        <p class="text-wrap font-weight-bold text-center text-h6 text-sm-h4">
-          Claim Exclusive Access
-        </p>
-      </v-btn>
+      <a href="https://store.steampowered.com/app/3778530/Joyful_Masks/" target="_blank" rel="noopener noreferrer"
+        style="display: block;">
+        <v-btn color="primary" class="mx-auto py-8 px-6"
+          style="height: auto; width: 100%; font-size: 2rem; font-weight: 700;">
+          <p class="text-wrap text-center" style="margin: 0;">
+            Wishlist Now!
+          </p>
+        </v-btn>
+      </a>
     </div>
+
+
 
     <!-- Parallax Section -->
     <v-img class="bg-white align-center align-md-start" src="../assets/art/keyArt.png" transition="scroll-y-transition"
